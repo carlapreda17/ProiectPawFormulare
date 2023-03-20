@@ -25,7 +25,7 @@ namespace ProiectPawFormulare
         private void button1_Click(object sender, EventArgs e)
         {
 
-            MessageBox.Show("Ai reusit sa faci click!");
+            MessageBox.Show("Ai reusit sa adaugi produsul");
             if (codTb.Text == "")
                 errorProvider1.SetError(codTb, "Introduceti codul");
             if (pretTb.Text == "")
@@ -61,6 +61,15 @@ namespace ProiectPawFormulare
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);    //afiseaza eroarea
+            }
+            finally
+            {
+                    codTb.Clear();
+                    pretTb.Clear(); 
+                    tipTb.Clear();
+                    numeTb.Clear();
+                    cantitateTb.Clear();
+                   
             }
 
         }
