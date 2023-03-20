@@ -75,6 +75,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "Adauga Cantitate";
             this.button1.UseVisualStyleBackColor = true;
+           
             // 
             // listBoxProduse
             // 

@@ -77,7 +77,5 @@ namespace ProiectPawFormulare
         {
             MessageBox.Show(m.ToString());
         }
-
-       
     }
 }

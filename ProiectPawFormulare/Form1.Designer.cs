@@ -48,73 +48,82 @@
             // 
             // codTb
             // 
-            this.codTb.Location = new System.Drawing.Point(132, 48);
+            this.codTb.Location = new System.Drawing.Point(88, 31);
+            this.codTb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.codTb.Name = "codTb";
-            this.codTb.Size = new System.Drawing.Size(100, 26);
+            this.codTb.Size = new System.Drawing.Size(68, 20);
             this.codTb.TabIndex = 0;
             // 
             // pretTb
             // 
-            this.pretTb.Location = new System.Drawing.Point(132, 80);
+            this.pretTb.Location = new System.Drawing.Point(88, 52);
+            this.pretTb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pretTb.Name = "pretTb";
-            this.pretTb.Size = new System.Drawing.Size(100, 26);
+            this.pretTb.Size = new System.Drawing.Size(68, 20);
             this.pretTb.TabIndex = 1;
             // 
             // numeTb
             // 
-            this.numeTb.Location = new System.Drawing.Point(132, 109);
+            this.numeTb.Location = new System.Drawing.Point(88, 71);
+            this.numeTb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.numeTb.Name = "numeTb";
-            this.numeTb.Size = new System.Drawing.Size(100, 26);
+            this.numeTb.Size = new System.Drawing.Size(68, 20);
             this.numeTb.TabIndex = 2;
             // 
             // tipTb
             // 
-            this.tipTb.Location = new System.Drawing.Point(132, 147);
+            this.tipTb.Location = new System.Drawing.Point(88, 96);
+            this.tipTb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tipTb.Name = "tipTb";
-            this.tipTb.Size = new System.Drawing.Size(100, 26);
+            this.tipTb.Size = new System.Drawing.Size(68, 20);
             this.tipTb.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 54);
+            this.label1.Location = new System.Drawing.Point(8, 35);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 20);
+            this.label1.Size = new System.Drawing.Size(64, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "Cod produs:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 83);
+            this.label2.Location = new System.Drawing.Point(8, 54);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 20);
+            this.label2.Size = new System.Drawing.Size(64, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "Pret produs:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 115);
+            this.label3.Location = new System.Drawing.Point(8, 75);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 20);
+            this.label3.Size = new System.Drawing.Size(73, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "Nume produs:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 147);
+            this.label4.Location = new System.Drawing.Point(8, 96);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 20);
+            this.label4.Size = new System.Drawing.Size(60, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "Tip produs:";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(45, 290);
+            this.button1.Location = new System.Drawing.Point(30, 188);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(155, 36);
+            this.button1.Size = new System.Drawing.Size(103, 23);
             this.button1.TabIndex = 8;
             this.button1.Text = "Creare produs";
             this.button1.UseVisualStyleBackColor = true;
@@ -126,25 +135,28 @@
             // 
             // cantitateTb
             // 
-            this.cantitateTb.Location = new System.Drawing.Point(132, 196);
+            this.cantitateTb.Location = new System.Drawing.Point(88, 127);
+            this.cantitateTb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cantitateTb.Name = "cantitateTb";
-            this.cantitateTb.Size = new System.Drawing.Size(100, 26);
+            this.cantitateTb.Size = new System.Drawing.Size(68, 20);
             this.cantitateTb.TabIndex = 9;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(25, 202);
+            this.label5.Location = new System.Drawing.Point(17, 131);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 20);
+            this.label5.Size = new System.Drawing.Size(49, 13);
             this.label5.TabIndex = 10;
             this.label5.Text = "Cantitate";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(267, 291);
+            this.button2.Location = new System.Drawing.Point(178, 189);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(169, 34);
+            this.button2.Size = new System.Drawing.Size(113, 22);
             this.button2.TabIndex = 11;
             this.button2.Text = "Vizualizare produse";
             this.button2.UseVisualStyleBackColor = true;
@@ -152,19 +164,20 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(516, 290);
+            this.button3.Location = new System.Drawing.Point(344, 188);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(232, 35);
+            this.button3.Size = new System.Drawing.Size(155, 23);
             this.button3.TabIndex = 12;
             this.button3.Text = "Vizualizare Magazin";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(533, 292);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label5);
@@ -178,6 +191,7 @@
             this.Controls.Add(this.numeTb);
             this.Controls.Add(this.pretTb);
             this.Controls.Add(this.codTb);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
