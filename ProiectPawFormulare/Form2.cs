@@ -29,30 +29,13 @@ namespace ProiectPawFormulare
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
-            int cantitate = Convert.ToInt32(cantTb);
-
-            // List<Tuple<Produs, int>> lista = new List<Tuple<Produs, int>>();
-            //for (int i = 0; i < listaProduse.Count; i++)
-            //{
-
-            // for (int j = 0; j < listaRaioane.Count; j++)
-            //{
-            // if (listaProduse[i].Tip == listaRaioane[j].Nume_raion)
-            //{
-
-            // listaRaioane[j] += new Tuple<Produs, int>(listaProduse[i], cantitate);
-            //  textBox1.Text = listaRaioane[j].ToString() + Environment.NewLine;
-
-            //}
-
-
-            //}
+            Form3 form = new Form3();
+            form.ShowDialog();
 
         }
-
-
     }
 
 

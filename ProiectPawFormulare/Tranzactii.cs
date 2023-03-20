@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 
 namespace ProiectPawFormulare
 {
-
     public class Tranzactii
     {
         private int cod;
@@ -57,9 +56,6 @@ namespace ProiectPawFormulare
         {
             this.cost_final = pret_produs * cantitate_produs;
         }
-
-
-
 
 
     }
