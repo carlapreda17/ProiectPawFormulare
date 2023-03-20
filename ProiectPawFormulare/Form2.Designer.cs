@@ -34,14 +34,15 @@
             this.cantTb = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.listBoxProduse = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(22, 147);
+            this.textBox1.Location = new System.Drawing.Point(22, 166);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(397, 201);
+            this.textBox1.Size = new System.Drawing.Size(270, 182);
             this.textBox1.TabIndex = 0;
             // 
             // contextMenuStrip1
@@ -74,13 +75,22 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "Adauga Cantitate";
             this.button1.UseVisualStyleBackColor = true;
-          
+            // 
+            // listBoxProduse
+            // 
+            this.listBoxProduse.FormattingEnabled = true;
+            this.listBoxProduse.ItemHeight = 20;
+            this.listBoxProduse.Location = new System.Drawing.Point(395, 184);
+            this.listBoxProduse.Name = "listBoxProduse";
+            this.listBoxProduse.Size = new System.Drawing.Size(311, 164);
+            this.listBoxProduse.TabIndex = 5;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.listBoxProduse);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cantTb);
@@ -99,5 +109,6 @@
         private System.Windows.Forms.TextBox cantTb;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ListBox listBoxProduse;
     }
 }

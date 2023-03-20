@@ -12,16 +12,19 @@ namespace ProiectPawFormulare
 {
     public partial class Form2 : Form
     {
-        
-        public Form2(List<Produs> listaProduse)
+
+        public Form2(Magazin m)
         {
             InitializeComponent();
-            
-            foreach(Produs p in listaProduse)
-            {
-                textBox1.Text = p.ToString() + Environment.NewLine;
-            }
 
+            foreach (Raion r in m.ListaRaioane)
+            {
+                foreach (Tuple<Produs, int> p in r.ListaProduse)
+                {
+                    textBox1.Text = p.Item1.ToString() + Environment.NewLine;
+                    listBoxProduse.Items.Add(p.Item1);
+                }
+            }
 
 
         }

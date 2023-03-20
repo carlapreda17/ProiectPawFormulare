@@ -7,22 +7,23 @@ using System.Threading.Tasks;
 
 namespace ProiectPawFormulare
 {
-    
-    internal class Tranzactii
+
+    public class Tranzactii
     {
         private int cod;
         private int cantitate_produs;
         private string data;
         private float cost_final;
-        
 
-        public int Cantitate_produs { 
-            
+
+        public int Cantitate_produs
+        {
+
             get => cantitate_produs;
             set
             {
                 if (value > 0)
-                   cantitate_produs=value;
+                    cantitate_produs = value;
             }
         }
         public string Data { get => data; set => data = value; }
@@ -31,33 +32,33 @@ namespace ProiectPawFormulare
 
         public Tranzactii()
         {
-           
+
             data = "";
             cantitate_produs = 0;
             cod = 0;
             cost_final = 0;
         }
 
-        public Tranzactii(string data,int cantitate,int cod)
+        public Tranzactii(string data, int cantitate, int cod)
         {
-            this.data=data;
+            this.data = data;
             this.cantitate_produs = cantitate;
             this.cod = cod;
             this.cost_final = 0;
-            
+
         }
 
         public override string ToString()
         {
-            return  "Produsul cu codul: "+cod+" a fost achizionat la data de " + data + ", iar cantiatea este: "+cantitate_produs;
+            return "Produsul cu codul: " + cod + " a fost achizionat la data de " + data + ", iar cantiatea este: " + cantitate_produs;
         }
 
         public void CalculeazaCostFinal(float pret_produs)
         {
-           this.cost_final= pret_produs * cantitate_produs;
+            this.cost_final = pret_produs * cantitate_produs;
         }
 
-      
+
 
 
 
