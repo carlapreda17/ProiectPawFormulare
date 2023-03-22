@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,9 +11,12 @@ using System.Windows.Forms;
 
 namespace ProiectPawFormulare
 {
-    //List<Tranzactii> tranzactiiList=new List<Tranzactii>();
+   
     public partial class Form3 : Form
     {
+
+        List<Tranzactii> tranzactiiList = new List<Tranzactii>();
+        public Magazin m = new Magazin();
         public Form3()
         {
             InitializeComponent();
@@ -20,19 +24,65 @@ namespace ProiectPawFormulare
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Ai reusit sa adaugi tranzactia!");
+            var ok = 1;
             if(codPTb.Text=="")
+            {
                 errorProvider1.SetError(codPTb, "Introduceti codul");
+                ok = 0;
+            }
             if (dataTb.Text == "")
+            {
                 errorProvider1.SetError(dataTb, "Introduceti data");
+                ok = 0;
+            }
+               
             if (cantTB.Text == "")
+            {
                 errorProvider1.SetError(cantTB, "Introduceti codul");
+                ok = 0;
+            }
+            if (ok == 1)
+            {
+                DateTime data;
+                if (DateTime.TryParseExact(dataTb.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out data))
+                {
+                    MessageBox.Show("Ai reusit sa adaugi tranzactia!");
+                }
+                else
+                {
+                    MessageBox.Show("Data invalida!");
+                }
+                   
 
-            int cod=Convert.ToInt32(codPTb.Text);
-            int cantitate_produs=Convert.ToInt32(cantTB.Text);
-            string data=dataTb.Text;
+            }
+            try
+            {
+                int cod = Convert.ToInt32(codPTb.Text);
+                int cantitate_produs = Convert.ToInt32(cantTB.Text);
+                string data = dataTb.Text;
 
+                Tranzactii t = new Tranzactii(data, cantitate_produs, cod);
+                m.AdaugaTranzactie(t);
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                codPTb.Clear();
+                cantTB.Clear();
+                dataTb.Clear();
+            }
+           
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form4 form = new Form4(m);
+            form.ShowDialog();
 
         }
     }

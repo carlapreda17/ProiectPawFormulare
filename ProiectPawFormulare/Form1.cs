@@ -25,17 +25,55 @@ namespace ProiectPawFormulare
         private void button1_Click(object sender, EventArgs e)
         {
 
-            MessageBox.Show("Ai reusit sa adaugi produsul");
+            var ok = 1;
             if (codTb.Text == "")
+            {
                 errorProvider1.SetError(codTb, "Introduceti codul");
+                ok = 0;
+            }
             if (pretTb.Text == "")
+            {
                 errorProvider1.SetError(pretTb, "Introduceti pretul");
+                ok = 0;
+            }
             if (numeTb.Text == "")
+            {
                 errorProvider1.SetError(numeTb, "Introduceti numele");
+                ok = 0;
+            }
+               
             if (tipTb.Text == "")
+            {
                 errorProvider1.SetError(tipTb, "Introduceti tipul");
+                ok = 0;
+            }
+           
             if (cantitateTb.Text == "")
-                errorProvider1.SetError(tipTb, "Introduceti cantitatea");
+            {
+                errorProvider1.SetError(cantitateTb, "Introduceti cantitatea");
+                ok = 0;
+            }
+            if (ok == 1)
+            {
+                foreach (char c in tipTb.Text)
+                {
+                    if (!Char.IsLetter(c))
+                    {
+                        ok = 0;
+                        MessageBox.Show("Tip Invalid!");
+                        break;
+                    }
+                    
+                   
+                }
+
+                if (ok == 1)
+                {
+                    MessageBox.Show("Ai reusit sa adaugi produsul!");
+                }
+
+
+            }
             try
             {
                 int cod = Convert.ToInt32(codTb.Text);
