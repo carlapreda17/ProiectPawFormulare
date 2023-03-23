@@ -30,9 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.salvareProduseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
             this.listBoxProduse = new System.Windows.Forms.ListBox();
+            this.citireProduseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox1
@@ -43,11 +46,21 @@
             this.textBox1.Size = new System.Drawing.Size(270, 182);
             this.textBox1.TabIndex = 0;
             // 
-            // contextMenuStrip1
+            // contextMenuStrip2
             // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.salvareProduseToolStripMenuItem,
+            this.citireProduseToolStripMenuItem});
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(212, 68);
+            // 
+            // salvareProduseToolStripMenuItem
+            // 
+            this.salvareProduseToolStripMenuItem.Name = "salvareProduseToolStripMenuItem";
+            this.salvareProduseToolStripMenuItem.Size = new System.Drawing.Size(240, 32);
+            this.salvareProduseToolStripMenuItem.Text = "Salvare produse";
+            this.salvareProduseToolStripMenuItem.Click += new System.EventHandler(this.salvareProduseToolStripMenuItem_Click);
             // 
             // button1
             // 
@@ -61,12 +74,20 @@
             // 
             // listBoxProduse
             // 
+            this.listBoxProduse.ContextMenuStrip = this.contextMenuStrip2;
             this.listBoxProduse.FormattingEnabled = true;
             this.listBoxProduse.ItemHeight = 20;
             this.listBoxProduse.Location = new System.Drawing.Point(395, 184);
             this.listBoxProduse.Name = "listBoxProduse";
             this.listBoxProduse.Size = new System.Drawing.Size(311, 164);
             this.listBoxProduse.TabIndex = 5;
+            // 
+            // citireProduseToolStripMenuItem
+            // 
+            this.citireProduseToolStripMenuItem.Name = "citireProduseToolStripMenuItem";
+            this.citireProduseToolStripMenuItem.Size = new System.Drawing.Size(240, 32);
+            this.citireProduseToolStripMenuItem.Text = "Citire produse";
+            this.citireProduseToolStripMenuItem.Click += new System.EventHandler(this.citireProduseToolStripMenuItem_Click);
             // 
             // Form2
             // 
@@ -78,6 +99,7 @@
             this.Controls.Add(this.textBox1);
             this.Name = "Form2";
             this.Text = "Form2";
+            this.contextMenuStrip2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -86,8 +108,10 @@
         #endregion
 
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListBox listBoxProduse;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem salvareProduseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem citireProduseToolStripMenuItem;
     }
 }

@@ -16,10 +16,11 @@ namespace ProiectPawFormulare
     {
 
         List<Tranzactii> tranzactiiList = new List<Tranzactii>();
-        public Magazin m = new Magazin();
-        public Form3()
+        public Magazin m;
+        public Form3(Magazin magazin)
         {
             InitializeComponent();
+            m = magazin;
         }
 
         private void button1_Click(object sender, EventArgs e)
