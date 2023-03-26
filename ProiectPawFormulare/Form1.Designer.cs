@@ -49,7 +49,7 @@
             // codTb
             // 
             this.codTb.Location = new System.Drawing.Point(88, 31);
-            this.codTb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.codTb.Margin = new System.Windows.Forms.Padding(2);
             this.codTb.Name = "codTb";
             this.codTb.Size = new System.Drawing.Size(68, 20);
             this.codTb.TabIndex = 0;
@@ -57,7 +57,7 @@
             // pretTb
             // 
             this.pretTb.Location = new System.Drawing.Point(88, 52);
-            this.pretTb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pretTb.Margin = new System.Windows.Forms.Padding(2);
             this.pretTb.Name = "pretTb";
             this.pretTb.Size = new System.Drawing.Size(68, 20);
             this.pretTb.TabIndex = 1;
@@ -65,7 +65,7 @@
             // numeTb
             // 
             this.numeTb.Location = new System.Drawing.Point(88, 71);
-            this.numeTb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numeTb.Margin = new System.Windows.Forms.Padding(2);
             this.numeTb.Name = "numeTb";
             this.numeTb.Size = new System.Drawing.Size(68, 20);
             this.numeTb.TabIndex = 2;
@@ -73,7 +73,7 @@
             // tipTb
             // 
             this.tipTb.Location = new System.Drawing.Point(88, 96);
-            this.tipTb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tipTb.Margin = new System.Windows.Forms.Padding(2);
             this.tipTb.Name = "tipTb";
             this.tipTb.Size = new System.Drawing.Size(68, 20);
             this.tipTb.TabIndex = 3;
@@ -121,7 +121,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(30, 188);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(103, 23);
             this.button1.TabIndex = 8;
@@ -136,7 +136,7 @@
             // cantitateTb
             // 
             this.cantitateTb.Location = new System.Drawing.Point(88, 127);
-            this.cantitateTb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cantitateTb.Margin = new System.Windows.Forms.Padding(2);
             this.cantitateTb.Name = "cantitateTb";
             this.cantitateTb.Size = new System.Drawing.Size(68, 20);
             this.cantitateTb.TabIndex = 9;
@@ -154,7 +154,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(178, 189);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(113, 22);
             this.button2.TabIndex = 11;
@@ -165,7 +165,7 @@
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(344, 188);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(155, 23);
             this.button3.TabIndex = 12;
@@ -191,7 +191,7 @@
             this.Controls.Add(this.numeTb);
             this.Controls.Add(this.pretTb);
             this.Controls.Add(this.codTb);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

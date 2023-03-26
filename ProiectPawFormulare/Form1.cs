@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace ProiectPawFormulare
 {
@@ -122,7 +123,12 @@ namespace ProiectPawFormulare
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(m.ToString());
+           
+           // MessageBox.Show(m.ToString());
+            Form5 from = new Form5(m);
+            from.ShowDialog();
         }
+
+       
     }
 }

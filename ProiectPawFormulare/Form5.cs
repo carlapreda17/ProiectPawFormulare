@@ -11,35 +11,32 @@ using System.IO;
 
 namespace ProiectPawFormulare
 {
-    public partial class Form4 : Form
+    public partial class Form5 : Form
     {
-        public Magazin m=new Magazin();
-        public Form4(Magazin m)
+        public Magazin m;
+        public Form5(Magazin magazin)
         {
             InitializeComponent();
-            foreach(Tranzactii t in m.ListaTranzactii)
-            {
-                textBox1.Text = t.ToString() + Environment.NewLine;
-                listBox1.Items.Add(t);
-            }
+            m = magazin;
+            textBox1.Text=m.ToString()+Environment.NewLine;
         }
 
-        private void salvareFisierToolStripMenuItem_Click(object sender, EventArgs e)
+        private void salvareMagazinToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveFileDialog dlg = new SaveFileDialog();
             dlg.Filter = "(*.txt)|*.txt"; //filtrare fisiere
             if (dlg.ShowDialog() == DialogResult.OK)
             {
                 StreamWriter sw = new StreamWriter(dlg.FileName);
-                foreach(Tranzactii t in listBox1.Items)
-                    sw.WriteLine(t.ToString());
+            
+                 sw.WriteLine(m.ToString());
 
                 sw.Close();
                 textBox1.Clear();
             }
         }
 
-        private void citireFisierToolStripMenuItem_Click(object sender, EventArgs e)
+        private void citireMagazinToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog dlg = new OpenFileDialog();
             dlg.Filter = "(*.txt)|*.txt";

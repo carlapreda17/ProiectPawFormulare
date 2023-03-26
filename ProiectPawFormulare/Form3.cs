@@ -83,7 +83,7 @@ namespace ProiectPawFormulare
         private void button2_Click(object sender, EventArgs e)
         {
             Form4 form = new Form4(m);
-            form.ShowDialog();
+            form.Show();
 
         }
     }

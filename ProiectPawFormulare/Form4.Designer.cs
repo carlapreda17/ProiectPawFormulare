@@ -40,19 +40,20 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(0, -1);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(395, 394);
+            this.textBox1.Size = new System.Drawing.Size(265, 257);
             this.textBox1.TabIndex = 0;
             // 
             // listBox1
             // 
             this.listBox1.ContextMenuStrip = this.contextMenuStrip1;
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(425, 10);
+            this.listBox1.Location = new System.Drawing.Point(283, 6);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(363, 364);
+            this.listBox1.Size = new System.Drawing.Size(243, 238);
             this.listBox1.TabIndex = 1;
             // 
             // contextMenuStrip1
@@ -62,28 +63,31 @@
             this.salvareFisierToolStripMenuItem,
             this.citireFisierToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(241, 101);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 70);
             // 
             // salvareFisierToolStripMenuItem
             // 
             this.salvareFisierToolStripMenuItem.Name = "salvareFisierToolStripMenuItem";
-            this.salvareFisierToolStripMenuItem.Size = new System.Drawing.Size(240, 32);
+            this.salvareFisierToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.salvareFisierToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.salvareFisierToolStripMenuItem.Text = "Salvare fisier";
             this.salvareFisierToolStripMenuItem.Click += new System.EventHandler(this.salvareFisierToolStripMenuItem_Click);
             // 
             // citireFisierToolStripMenuItem
             // 
             this.citireFisierToolStripMenuItem.Name = "citireFisierToolStripMenuItem";
-            this.citireFisierToolStripMenuItem.Size = new System.Drawing.Size(182, 32);
+            this.citireFisierToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.citireFisierToolStripMenuItem.Text = "Citire fisier";
+            this.citireFisierToolStripMenuItem.Click += new System.EventHandler(this.citireFisierToolStripMenuItem_Click);
             // 
             // Form4
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(533, 292);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.textBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form4";
             this.Text = "Form4";
             this.contextMenuStrip1.ResumeLayout(false);
