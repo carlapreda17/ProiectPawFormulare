@@ -45,6 +45,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(605, 294);
             this.textBox1.TabIndex = 0;
+            
             // 
             // contextMenuStrip1
             // 

@@ -1,4 +1,0 @@
-Numele produsului este Milka, de tip bomboane, cod: 122, are pretul de 12 lei
-
-Numele produsului este Oreo, de tip biscuiti, cod: 123, are pretul de 6 lei
-
