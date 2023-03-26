@@ -40,12 +40,12 @@ namespace ProiectPawFormulare
 
         private void salvareProduseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SaveFileDialog dlg = new SaveFileDialog();
-            dlg.Filter = "(*.txt)|*.txt"; //filtrare fisiere
-            if (dlg.ShowDialog() == DialogResult.OK)
-            {
-                StreamWriter sw = new StreamWriter(dlg.FileName);
-                foreach (Raion r in m.ListaRaioane)
+
+            string numeFisier = "produse.txt";
+
+            StreamWriter sw = new StreamWriter(numeFisier);
+
+            foreach (Raion r in m.ListaRaioane)
                 {
                     foreach (Tuple<Produs, int> p in r.ListaProduse)
                     {
@@ -55,19 +55,16 @@ namespace ProiectPawFormulare
                 
                 sw.Close();
                 textBox1.Clear();
-            }
+            
         }
 
         private void citireProduseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenFileDialog dlg = new OpenFileDialog();
-            dlg.Filter = "(*.txt)|*.txt";
-            if (dlg.ShowDialog() == DialogResult.OK)
-            {
-                StreamReader sr = new StreamReader(dlg.FileName);
-                textBox1.Text = sr.ReadToEnd();
-                sr.Close();
-            }
+            string FilePath = "C:\\Users\\40737\\OneDrive\\Desktop\\ProiectPawFormulare\\ProiectPawFormulare\\produse.txt";
+
+            StreamReader sr = new StreamReader(FilePath);
+            textBox1.Text = sr.ReadToEnd();
+            sr.Close();
         }
     }
 

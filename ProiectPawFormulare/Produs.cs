@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProiectPawFormulare
 {
-        public class Produs
+        public class Produs:IComparable
         {
         private int codProdus;
         private float pret;
@@ -27,9 +27,9 @@ namespace ProiectPawFormulare
                 
         }
 
-        public Produs(int cod,string nume,string tip,float pret)
+        public Produs(int codProdus,string nume,string tip,float pret)
         {
-            this.codProdus = cod;   
+            this.codProdus = codProdus;
             this.nume = nume;       
             this.tip = tip;
             this.pret = pret;   
@@ -38,6 +38,14 @@ namespace ProiectPawFormulare
         {
             return "Numele produsului este " + nume + ", de tip " + tip + ", cod: " + codProdus+", are pretul de "+pret+" lei";
         }
-        
+
+        public int CompareTo(object obj)
+        {
+            Produs p=(Produs)obj;
+            if (codProdus == p.codProdus)
+                return -1;
+            else
+                return string.Compare(tip, p.tip);
+        }
     }
 }

@@ -17,15 +17,21 @@ namespace ProiectPawFormulare
         List<Raion> listaRaioane = new List<Raion>();
         List<Produs> listaProduse = new List<Produs>();
         public Magazin m = new Magazin();
+
         public Form1()
         {
             InitializeComponent();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            int cod = new Random().Next(10000);
+            codTb.Text = cod.ToString();    
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+           
             var ok = 1;
             if (codTb.Text == "")
             {
@@ -77,6 +83,7 @@ namespace ProiectPawFormulare
             }
             try
             {
+
                 int cod = Convert.ToInt32(codTb.Text);
                 float pret = Convert.ToSingle(pretTb.Text);
                 string nume = numeTb.Text;
@@ -126,7 +133,7 @@ namespace ProiectPawFormulare
            
            // MessageBox.Show(m.ToString());
             Form5 from = new Form5(m);
-            from.ShowDialog();
+            from.Show();
         }
 
        

@@ -23,29 +23,27 @@ namespace ProiectPawFormulare
 
         private void salvareMagazinToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SaveFileDialog dlg = new SaveFileDialog();
-            dlg.Filter = "(*.txt)|*.txt"; //filtrare fisiere
-            if (dlg.ShowDialog() == DialogResult.OK)
-            {
-                StreamWriter sw = new StreamWriter(dlg.FileName);
+            string numeFisier = "magazin.txt";
+           
+           
+            StreamWriter sw = new StreamWriter(numeFisier);
             
-                 sw.WriteLine(m.ToString());
+              sw.WriteLine(m.ToString());
 
                 sw.Close();
                 textBox1.Clear();
-            }
+           
         }
 
         private void citireMagazinToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenFileDialog dlg = new OpenFileDialog();
-            dlg.Filter = "(*.txt)|*.txt";
-            if (dlg.ShowDialog() == DialogResult.OK)
-            {
-                StreamReader sr = new StreamReader(dlg.FileName);
+            
+           string FilePath = "C:\\Users\\40737\\OneDrive\\Desktop\\ProiectPawFormulare\\ProiectPawFormulare\\magazin.txt";
+           
+             StreamReader sr = new StreamReader(FilePath);
                 textBox1.Text = sr.ReadToEnd();
                 sr.Close();
-            }
+            
         }
     }
 }

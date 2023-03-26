@@ -26,29 +26,30 @@ namespace ProiectPawFormulare
 
         private void salvareFisierToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SaveFileDialog dlg = new SaveFileDialog();
-            dlg.Filter = "(*.txt)|*.txt"; //filtrare fisiere
-            if (dlg.ShowDialog() == DialogResult.OK)
-            {
-                StreamWriter sw = new StreamWriter(dlg.FileName);
+            string numeFisier = "tranzactii.txt";
+
+            StreamWriter sw = new StreamWriter(numeFisier);
+
+            
+                
                 foreach(Tranzactii t in listBox1.Items)
                     sw.WriteLine(t.ToString());
 
                 sw.Close();
                 textBox1.Clear();
-            }
+            
         }
 
         private void citireFisierToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenFileDialog dlg = new OpenFileDialog();
-            dlg.Filter = "(*.txt)|*.txt";
-            if (dlg.ShowDialog() == DialogResult.OK)
-            {
-                StreamReader sr = new StreamReader(dlg.FileName);
+            string FilePath = "C:\\Users\\40737\\OneDrive\\Desktop\\ProiectPawFormulare\\ProiectPawFormulare\\tranzactii.txt";
+
+            StreamReader sr = new StreamReader(FilePath);
+           
+             
                 textBox1.Text = sr.ReadToEnd();
                 sr.Close();
-            }
+            
         }
     }
 }

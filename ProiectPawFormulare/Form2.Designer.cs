@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.salvareProduseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,7 +42,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(15, 108);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(181, 120);
@@ -54,7 +55,7 @@
             this.salvareProduseToolStripMenuItem,
             this.citireProduseToolStripMenuItem});
             this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(132, 47);
+            this.contextMenuStrip2.Size = new System.Drawing.Size(198, 48);
             // 
             // salvareProduseToolStripMenuItem
             // 
@@ -67,14 +68,14 @@
             // citireProduseToolStripMenuItem
             // 
             this.citireProduseToolStripMenuItem.Name = "citireProduseToolStripMenuItem";
-            this.citireProduseToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.citireProduseToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.citireProduseToolStripMenuItem.Text = "Citire produse";
             this.citireProduseToolStripMenuItem.Click += new System.EventHandler(this.citireProduseToolStripMenuItem_Click);
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(39, 51);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(123, 19);
             this.button1.TabIndex = 4;
@@ -85,9 +86,10 @@
             // listBoxProduse
             // 
             this.listBoxProduse.ContextMenuStrip = this.contextMenuStrip2;
+            this.listBoxProduse.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.listBoxProduse.FormattingEnabled = true;
             this.listBoxProduse.Location = new System.Drawing.Point(263, 120);
-            this.listBoxProduse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listBoxProduse.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxProduse.Name = "listBoxProduse";
             this.listBoxProduse.Size = new System.Drawing.Size(209, 108);
             this.listBoxProduse.TabIndex = 5;
@@ -96,11 +98,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(533, 292);
             this.Controls.Add(this.listBoxProduse);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ForeColor = System.Drawing.Color.DeepPink;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form2";
             this.Text = "Form2";
             this.contextMenuStrip2.ResumeLayout(false);

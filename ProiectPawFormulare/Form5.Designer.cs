@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form5));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.salvareMagazinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,7 +40,7 @@
             // textBox1
             // 
             this.textBox1.ContextMenuStrip = this.contextMenuStrip1;
-            this.textBox1.Location = new System.Drawing.Point(22, 34);
+            this.textBox1.Location = new System.Drawing.Point(23, 29);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(605, 294);
@@ -56,6 +57,7 @@
             // 
             // salvareMagazinToolStripMenuItem
             // 
+            this.salvareMagazinToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("salvareMagazinToolStripMenuItem.BackgroundImage")));
             this.salvareMagazinToolStripMenuItem.Name = "salvareMagazinToolStripMenuItem";
             this.salvareMagazinToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
             this.salvareMagazinToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
@@ -73,8 +75,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.textBox1);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "Form5";
             this.Text = "Form5";
             this.contextMenuStrip1.ResumeLayout(false);
