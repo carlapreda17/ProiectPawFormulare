@@ -28,50 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form5));
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.salvareMagazinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.citireMagazinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.ContextMenuStrip = this.contextMenuStrip1;
             this.textBox1.Location = new System.Drawing.Point(34, 45);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(906, 450);
             this.textBox1.TabIndex = 0;
-          
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.salvareMagazinToolStripMenuItem,
-            this.citireMagazinToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(274, 68);
-            // 
-            // salvareMagazinToolStripMenuItem
-            // 
-            this.salvareMagazinToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("salvareMagazinToolStripMenuItem.BackgroundImage")));
-            this.salvareMagazinToolStripMenuItem.Name = "salvareMagazinToolStripMenuItem";
-            this.salvareMagazinToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.salvareMagazinToolStripMenuItem.Size = new System.Drawing.Size(273, 32);
-            this.salvareMagazinToolStripMenuItem.Text = "Salvare magazin";
-            this.salvareMagazinToolStripMenuItem.Click += new System.EventHandler(this.salvareMagazinToolStripMenuItem_Click);
-            // 
-            // citireMagazinToolStripMenuItem
-            // 
-            this.citireMagazinToolStripMenuItem.Name = "citireMagazinToolStripMenuItem";
-            this.citireMagazinToolStripMenuItem.Size = new System.Drawing.Size(273, 32);
-            this.citireMagazinToolStripMenuItem.Text = "Citire magazin";
-            this.citireMagazinToolStripMenuItem.Click += new System.EventHandler(this.citireMagazinToolStripMenuItem_Click);
             // 
             // Form5
             // 
@@ -84,7 +52,6 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form5";
             this.Text = "Form5";
-            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -93,8 +60,5 @@
         #endregion
 
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem salvareMagazinToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem citireMagazinToolStripMenuItem;
     }
 }

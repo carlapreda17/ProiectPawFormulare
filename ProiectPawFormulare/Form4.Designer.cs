@@ -52,24 +52,21 @@
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.salvareFisierToolStripMenuItem,
-            this.citireFisierToolStripMenuItem});
+            this.citireFisierToolStripMenuItem,
+            this.salvareFisierToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(244, 101);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(241, 101);
             // 
             // salvareFisierToolStripMenuItem
             // 
             this.salvareFisierToolStripMenuItem.Name = "salvareFisierToolStripMenuItem";
-            this.salvareFisierToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.salvareFisierToolStripMenuItem.Size = new System.Drawing.Size(243, 32);
-            this.salvareFisierToolStripMenuItem.Text = "Salvare fisier";
-            this.salvareFisierToolStripMenuItem.Click += new System.EventHandler(this.salvareFisierToolStripMenuItem_Click);
+            this.salvareFisierToolStripMenuItem.Size = new System.Drawing.Size(240, 32);
             // 
             // citireFisierToolStripMenuItem
             // 
             this.citireFisierToolStripMenuItem.Name = "citireFisierToolStripMenuItem";
             this.citireFisierToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
-            this.citireFisierToolStripMenuItem.Size = new System.Drawing.Size(243, 32);
+            this.citireFisierToolStripMenuItem.Size = new System.Drawing.Size(240, 32);
             this.citireFisierToolStripMenuItem.Text = "Citire fisier";
             this.citireFisierToolStripMenuItem.Click += new System.EventHandler(this.citireFisierToolStripMenuItem_Click);
             // 

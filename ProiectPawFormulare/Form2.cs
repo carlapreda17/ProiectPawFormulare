@@ -40,28 +40,9 @@ namespace ProiectPawFormulare
 
         }
 
-        private void salvareProduseToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+      
 
-            string numeFisier = "produse.txt";
-
-            using (StreamWriter sw = new StreamWriter(numeFisier, true))
-            {
-
-
-               // foreach (Raion r in m.ListaRaioane)
-                   // {
-                //foreach (Tuple<Produs, int> p in r.ListaProduse)
-               /// {
-                  //  sw.WriteLine(p.Item1.ToString() + Environment.NewLine);
-                   // }
-                   //}
-
-             sw.Close();
-            //textBox1.Clear();
-            }
-
-        }
+        
 
         private void citireProduseToolStripMenuItem_Click(object sender, EventArgs e)
         {

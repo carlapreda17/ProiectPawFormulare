@@ -36,44 +36,39 @@ namespace ProiectPawFormulare
             fs1.Close();
 
 
-            foreach (Produs produs in produse)
+            foreach (Raion r in m.ListaRaioane)
             {
-                
-                textBox1.Text+=produs.ToString()+Environment.NewLine;
+                int suma = 0;
+                string stringProduse = "";
+                foreach (Produs produs in produse)
+                {
+                    if (produs.Tip.ToLower() == r.Nume_raion.ToLower())
+                    {
+                        suma++;
+                        stringProduse += produs.ToString() + Environment.NewLine;
+                    }
+                }
+                if (suma == 0)
+                {
+                    textBox1.Text += "Raionul " + r.Nume_raion + " nu are produse!" + Environment.NewLine;
+                }
+                else
+                {
+                    textBox1.Text += "Raionul " + r.Nume_raion + " are urmatoarele produse:" + Environment.NewLine;
+                    textBox1.Text += stringProduse;
+                }
             }
-            foreach(Tranzactii tranzactii in tranzactii)
+
+            foreach (Tranzactii tranzactii in tranzactii)
             {
-                textBox1.Text+=tranzactii.ToString() + Environment.NewLine;
+                textBox1.Text += tranzactii.ToString() + Environment.NewLine;
             }
 
 
-           // textBox1.Text=m.ToString()+Environment.NewLine;
+
         }
 
-        private void salvareMagazinToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-            
-                StreamWriter sw = new StreamWriter("C:\\Users\\40737\\OneDrive\\Desktop\\ProiectPawFormulare\\ProiectPawFormulare\\magazin.txt");
-                sw.WriteLine();
-
-                sw.Close();
-                textBox1.Clear();
-            
-           
-        }
-
-        private void citireMagazinToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-           string FilePath = "C:\\Users\\40737\\OneDrive\\Desktop\\ProiectPawFormulare\\ProiectPawFormulare\\magazin.txt";
-           
-             StreamReader sr = new StreamReader(FilePath);
-                textBox1.Text = sr.ReadToEnd();
-                sr.Close();
-            
-        }
-
+       
         
     }
 }

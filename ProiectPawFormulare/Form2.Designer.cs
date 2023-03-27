@@ -42,24 +42,21 @@
             // 
             this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.salvareProduseToolStripMenuItem,
-            this.citireProduseToolStripMenuItem});
+            this.citireProduseToolStripMenuItem,
+            this.salvareProduseToolStripMenuItem});
             this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(273, 101);
+            this.contextMenuStrip2.Size = new System.Drawing.Size(258, 101);
             // 
             // salvareProduseToolStripMenuItem
             // 
             this.salvareProduseToolStripMenuItem.Name = "salvareProduseToolStripMenuItem";
-            this.salvareProduseToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.salvareProduseToolStripMenuItem.Size = new System.Drawing.Size(272, 32);
-            this.salvareProduseToolStripMenuItem.Text = "Salvare produse";
-            this.salvareProduseToolStripMenuItem.Click += new System.EventHandler(this.salvareProduseToolStripMenuItem_Click);
+            this.salvareProduseToolStripMenuItem.Size = new System.Drawing.Size(257, 32);
             // 
             // citireProduseToolStripMenuItem
             // 
             this.citireProduseToolStripMenuItem.Name = "citireProduseToolStripMenuItem";
             this.citireProduseToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
-            this.citireProduseToolStripMenuItem.Size = new System.Drawing.Size(272, 32);
+            this.citireProduseToolStripMenuItem.Size = new System.Drawing.Size(257, 32);
             this.citireProduseToolStripMenuItem.Text = "Citire produse";
             this.citireProduseToolStripMenuItem.Click += new System.EventHandler(this.citireProduseToolStripMenuItem_Click);
             // 

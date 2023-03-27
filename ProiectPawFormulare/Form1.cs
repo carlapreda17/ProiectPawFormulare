@@ -84,16 +84,9 @@ namespace ProiectPawFormulare
                 {
                     Produs p=new Produs(Int32.Parse(codTb.Text),numeTb.Text,tipTb.Text,float.Parse(pretTb.Text));
                    
-                    int cantitate=Int32.Parse(cantitateTb.Text);
-                    Tuple<Produs, int> produsCantitate = new Tuple<Produs, int>(p, cantitate);
+                    
                     listaProduse.Add(p);
-                    for (int i = 0; i < m.ListaRaioane.Count; i++)
-                    {
-                        if (m.ListaRaioane[i].Nume_raion.ToLower() == tipTb.Text.ToLower())
-                        {
-                            //adaugare pe lista de raioane??
-                        }
-                    }
+                    
 
                     FileStream fs = new FileStream("produse.dat", FileMode.Create, FileAccess.Write);
                     BinaryFormatter bf = new BinaryFormatter();

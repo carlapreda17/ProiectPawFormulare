@@ -26,21 +26,7 @@ namespace ProiectPawFormulare
             }
         }
 
-        private void salvareFisierToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            string numeFisier = "tranzactii.txt";
-
-            StreamWriter sw = new StreamWriter(numeFisier);
-
-            
-                
-                foreach(Tranzactii t in listBox1.Items)
-                    sw.WriteLine(t.ToString());
-
-                sw.Close();
-                //textBox1.Clear();
-            
-        }
+      
 
         private void citireFisierToolStripMenuItem_Click(object sender, EventArgs e)
         {
