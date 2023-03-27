@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.salvareProduseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.citireProduseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,16 +38,6 @@
             this.contextMenuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(15, 108);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(181, 120);
-            this.textBox1.TabIndex = 0;
-            
-            // 
             // contextMenuStrip2
             // 
             this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(24, 24);
@@ -56,29 +45,29 @@
             this.salvareProduseToolStripMenuItem,
             this.citireProduseToolStripMenuItem});
             this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(198, 48);
+            this.contextMenuStrip2.Size = new System.Drawing.Size(273, 101);
             // 
             // salvareProduseToolStripMenuItem
             // 
             this.salvareProduseToolStripMenuItem.Name = "salvareProduseToolStripMenuItem";
             this.salvareProduseToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.salvareProduseToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.salvareProduseToolStripMenuItem.Size = new System.Drawing.Size(272, 32);
             this.salvareProduseToolStripMenuItem.Text = "Salvare produse";
             this.salvareProduseToolStripMenuItem.Click += new System.EventHandler(this.salvareProduseToolStripMenuItem_Click);
             // 
             // citireProduseToolStripMenuItem
             // 
             this.citireProduseToolStripMenuItem.Name = "citireProduseToolStripMenuItem";
-            this.citireProduseToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.citireProduseToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
+            this.citireProduseToolStripMenuItem.Size = new System.Drawing.Size(272, 32);
             this.citireProduseToolStripMenuItem.Text = "Citire produse";
             this.citireProduseToolStripMenuItem.Click += new System.EventHandler(this.citireProduseToolStripMenuItem_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(39, 51);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(58, 78);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 19);
+            this.button1.Size = new System.Drawing.Size(184, 29);
             this.button1.TabIndex = 4;
             this.button1.Text = "Adauga Tranzactie";
             this.button1.UseVisualStyleBackColor = true;
@@ -89,34 +78,29 @@
             this.listBoxProduse.ContextMenuStrip = this.contextMenuStrip2;
             this.listBoxProduse.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.listBoxProduse.FormattingEnabled = true;
-            this.listBoxProduse.Location = new System.Drawing.Point(263, 120);
-            this.listBoxProduse.Margin = new System.Windows.Forms.Padding(2);
+            this.listBoxProduse.ItemHeight = 20;
+            this.listBoxProduse.Location = new System.Drawing.Point(12, 130);
             this.listBoxProduse.Name = "listBoxProduse";
-            this.listBoxProduse.Size = new System.Drawing.Size(209, 108);
+            this.listBoxProduse.Size = new System.Drawing.Size(750, 304);
             this.listBoxProduse.TabIndex = 5;
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(533, 292);
+            this.ClientSize = new System.Drawing.Size(800, 449);
             this.Controls.Add(this.listBoxProduse);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
             this.ForeColor = System.Drawing.Color.DeepPink;
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form2";
             this.Text = "Form2";
             this.contextMenuStrip2.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListBox listBoxProduse;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;

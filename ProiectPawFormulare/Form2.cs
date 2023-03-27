@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace ProiectPawFormulare
 {
     public partial class Form2 : Form
     {
         public Magazin m;
+        List<Produs> produse=new List<Produs>();
         public Form2(Magazin magazin)
         {
             InitializeComponent();
@@ -22,7 +24,7 @@ namespace ProiectPawFormulare
             {
                 foreach (Tuple<Produs, int> p in r.ListaProduse)
                 {
-                    textBox1.Text = p.Item1.ToString() + Environment.NewLine;
+                   // textBox1.Text = p.Item1.ToString() + Environment.NewLine;
                     listBoxProduse.Items.Add(p.Item1);
                 }
             }
@@ -56,18 +58,26 @@ namespace ProiectPawFormulare
                    //}
 
              sw.Close();
-            textBox1.Clear();
+            //textBox1.Clear();
             }
 
         }
 
         private void citireProduseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string FilePath = "C:\\Users\\40737\\OneDrive\\Desktop\\ProiectPawFormulare\\ProiectPawFormulare\\bin\\Debug\\produse.txt";
 
-            StreamReader sr = new StreamReader(FilePath);
-            textBox1.Text = sr.ReadToEnd();
-            sr.Close();
+            BinaryFormatter bf3 = new BinaryFormatter();
+            FileStream fs3 = new FileStream("produse.dat", FileMode.Open, FileAccess.Read);
+
+         
+            if (new FileInfo("produse.dat").Length != 0)
+                   produse  = (List<Produs>)bf3.Deserialize(fs3);
+                 fs3.Close();
+            foreach (Produs produs in produse)
+            {
+
+                listBoxProduse.Items.Add(produs);
+            }
         }
 
         

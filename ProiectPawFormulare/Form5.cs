@@ -39,11 +39,11 @@ namespace ProiectPawFormulare
             foreach (Produs produs in produse)
             {
                 
-                textBox1.Text+=produs.ToString();
+                textBox1.Text+=produs.ToString()+Environment.NewLine;
             }
             foreach(Tranzactii tranzactii in tranzactii)
             {
-                textBox1.Text+=tranzactii.ToString();
+                textBox1.Text+=tranzactii.ToString() + Environment.NewLine;
             }
 
 

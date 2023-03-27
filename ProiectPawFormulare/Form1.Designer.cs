@@ -44,87 +44,79 @@
             this.label5 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // codTb
             // 
-            this.codTb.Location = new System.Drawing.Point(88, 31);
-            this.codTb.Margin = new System.Windows.Forms.Padding(2);
+            this.codTb.Location = new System.Drawing.Point(132, 81);
             this.codTb.Name = "codTb";
-            this.codTb.Size = new System.Drawing.Size(68, 20);
+            this.codTb.Size = new System.Drawing.Size(100, 26);
             this.codTb.TabIndex = 0;
             // 
             // pretTb
             // 
-            this.pretTb.Location = new System.Drawing.Point(88, 52);
-            this.pretTb.Margin = new System.Windows.Forms.Padding(2);
+            this.pretTb.Location = new System.Drawing.Point(132, 124);
             this.pretTb.Name = "pretTb";
-            this.pretTb.Size = new System.Drawing.Size(68, 20);
+            this.pretTb.Size = new System.Drawing.Size(100, 26);
             this.pretTb.TabIndex = 1;
             // 
             // numeTb
             // 
-            this.numeTb.Location = new System.Drawing.Point(88, 71);
-            this.numeTb.Margin = new System.Windows.Forms.Padding(2);
+            this.numeTb.Location = new System.Drawing.Point(132, 162);
             this.numeTb.Name = "numeTb";
-            this.numeTb.Size = new System.Drawing.Size(68, 20);
+            this.numeTb.Size = new System.Drawing.Size(100, 26);
             this.numeTb.TabIndex = 2;
             // 
             // tipTb
             // 
-            this.tipTb.Location = new System.Drawing.Point(88, 96);
-            this.tipTb.Margin = new System.Windows.Forms.Padding(2);
+            this.tipTb.Location = new System.Drawing.Point(132, 194);
             this.tipTb.Name = "tipTb";
-            this.tipTb.Size = new System.Drawing.Size(68, 20);
+            this.tipTb.Size = new System.Drawing.Size(100, 26);
             this.tipTb.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 35);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(12, 87);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 13);
+            this.label1.Size = new System.Drawing.Size(95, 20);
             this.label1.TabIndex = 4;
             this.label1.Text = "Cod produs:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 54);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(12, 130);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 13);
+            this.label2.Size = new System.Drawing.Size(95, 20);
             this.label2.TabIndex = 5;
             this.label2.Text = "Pret produs:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 75);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(12, 168);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 13);
+            this.label3.Size = new System.Drawing.Size(108, 20);
             this.label3.TabIndex = 6;
             this.label3.Text = "Nume produs:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 96);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(12, 197);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 13);
+            this.label4.Size = new System.Drawing.Size(87, 20);
             this.label4.TabIndex = 7;
             this.label4.Text = "Tip produs:";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(30, 188);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(38, 330);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 23);
+            this.button1.Size = new System.Drawing.Size(154, 35);
             this.button1.TabIndex = 8;
             this.button1.Text = "Creare produs";
             this.button1.UseVisualStyleBackColor = true;
@@ -136,28 +128,25 @@
             // 
             // cantitateTb
             // 
-            this.cantitateTb.Location = new System.Drawing.Point(88, 127);
-            this.cantitateTb.Margin = new System.Windows.Forms.Padding(2);
+            this.cantitateTb.Location = new System.Drawing.Point(132, 240);
             this.cantitateTb.Name = "cantitateTb";
-            this.cantitateTb.Size = new System.Drawing.Size(68, 20);
+            this.cantitateTb.Size = new System.Drawing.Size(100, 26);
             this.cantitateTb.TabIndex = 9;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 131);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(25, 240);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 13);
+            this.label5.Size = new System.Drawing.Size(74, 20);
             this.label5.TabIndex = 10;
             this.label5.Text = "Cantitate";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(178, 189);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Location = new System.Drawing.Point(289, 331);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(113, 22);
+            this.button2.Size = new System.Drawing.Size(170, 34);
             this.button2.TabIndex = 11;
             this.button2.Text = "Vizualizare produse";
             this.button2.UseVisualStyleBackColor = true;
@@ -165,23 +154,35 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(344, 188);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
+            this.button3.Location = new System.Drawing.Point(548, 331);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(155, 23);
+            this.button3.Size = new System.Drawing.Size(232, 35);
             this.button3.TabIndex = 12;
             this.button3.Text = "Vizualizare Magazin";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("MS Reference Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label6.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.label6.Location = new System.Drawing.Point(196, 28);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(497, 35);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Magazinul de dulciuri Candy Land";
+            // 
             // Form1
             // 
             this.AccessibleDescription = "Magazin";
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(605, 280);
+            this.ClientSize = new System.Drawing.Size(865, 431);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label5);
@@ -197,7 +198,6 @@
             this.Controls.Add(this.codTb);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.HelpButton = true;
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -223,6 +223,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label6;
     }
 }
 
