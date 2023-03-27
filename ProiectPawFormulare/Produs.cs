@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProiectPawFormulare
 {
+    [Serializable]
         public class Produs:IComparable
         {
         private int codProdus;

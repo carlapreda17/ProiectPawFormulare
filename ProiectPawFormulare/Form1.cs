@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace ProiectPawFormulare
 {
@@ -21,6 +22,11 @@ namespace ProiectPawFormulare
         public Form1()
         {
             InitializeComponent();
+            FileStream fs = new FileStream("produse.dat", FileMode.Open, FileAccess.Read);
+            BinaryFormatter bf = new BinaryFormatter();
+            if (new FileInfo("produse.dat").Length != 0)
+                listaProduse = (List<Produs>)bf.Deserialize(fs);
+            fs.Close();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -76,6 +82,17 @@ namespace ProiectPawFormulare
 
                 if (ok == 1)
                 {
+                    Produs p=new Produs(Int32.Parse(codTb.Text),numeTb.Text,tipTb.Text,float.Parse(pretTb.Text));
+                    listaProduse.Add(p);
+                    
+
+                    FileStream fs = new FileStream("produse.dat", FileMode.Create, FileAccess.Write);
+                    BinaryFormatter bf = new BinaryFormatter();
+                    bf.Serialize(fs, listaProduse);
+                    fs.Close();
+                    
+                   
+
                     MessageBox.Show("Ai reusit sa adaugi produsul!");
                 }
 

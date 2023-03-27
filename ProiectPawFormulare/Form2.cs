@@ -45,13 +45,15 @@ namespace ProiectPawFormulare
 
             using (StreamWriter sw = new StreamWriter(numeFisier, true))
             {
-                foreach (Raion r in m.ListaRaioane)
-                    {
-                foreach (Tuple<Produs, int> p in r.ListaProduse)
-                 {
-                    sw.WriteLine(p.Item1.ToString() + Environment.NewLine);
-                    }
-                   }
+
+
+               // foreach (Raion r in m.ListaRaioane)
+                   // {
+                //foreach (Tuple<Produs, int> p in r.ListaProduse)
+               /// {
+                  //  sw.WriteLine(p.Item1.ToString() + Environment.NewLine);
+                   // }
+                   //}
 
              sw.Close();
             textBox1.Clear();
@@ -61,7 +63,7 @@ namespace ProiectPawFormulare
 
         private void citireProduseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string FilePath = "C:\\Users\\40737\\OneDrive\\Desktop\\ProiectPawFormulare\\ProiectPawFormulare\\produse.txt";
+            string FilePath = "C:\\Users\\40737\\OneDrive\\Desktop\\ProiectPawFormulare\\ProiectPawFormulare\\bin\\Debug\\produse.txt";
 
             StreamReader sr = new StreamReader(FilePath);
             textBox1.Text = sr.ReadToEnd();

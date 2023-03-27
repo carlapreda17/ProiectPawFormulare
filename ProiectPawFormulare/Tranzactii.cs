@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProiectPawFormulare
 {
+    [Serializable]
     public class Tranzactii
     {
         private int cod;

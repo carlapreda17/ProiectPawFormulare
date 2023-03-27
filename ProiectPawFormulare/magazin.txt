@@ -1,6 +1,6 @@
 Magazinul de dulciuri Candyland de pe strada Penes Curcanul 16-18 are urmatoarele raioane: 
 Raionul ciocolata are urmatoarele produse 
-(Numele produsului este Milka, de tip ciocolata, cod: 2872, are pretul de 12 lei, 100)
+(Numele produsului este milka, de tip ciocolata, cod: 9402, are pretul de 12 lei, 12)
 
 Raionul bomboane are urmatoarele produse 
 

@@ -4,7 +4,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Globalization;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -47,6 +49,16 @@ namespace ProiectPawFormulare
                 DateTime data;
                 if (DateTime.TryParseExact(dataTb.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out data))
                 {
+                    Tranzactii t = new Tranzactii(dataTb.Text,Int32.Parse(codPTb.Text), Int32.Parse(cantTB.Text));
+                    tranzactiiList.Add(t);
+
+
+                    FileStream fs = new FileStream("tranzactii.dat", FileMode.Create, FileAccess.Write);
+                    BinaryFormatter bf = new BinaryFormatter();
+                    bf.Serialize(fs, tranzactiiList);
+                    fs.Close();
+
+
                     MessageBox.Show("Ai reusit sa adaugi tranzactia!");
                 }
                 else
