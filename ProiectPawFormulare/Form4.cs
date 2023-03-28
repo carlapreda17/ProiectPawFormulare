@@ -33,7 +33,7 @@ namespace ProiectPawFormulare
             BinaryFormatter bf4 = new BinaryFormatter();
             FileStream fs4 = new FileStream("tranzactii.dat", FileMode.Open, FileAccess.Read);
 
-
+            //listBoxProduse.Items.Clear();
             if (new FileInfo("tranzactii.dat").Length != 0)
                    list= (List<Tranzactii>)bf4.Deserialize(fs4);
             fs4.Close();

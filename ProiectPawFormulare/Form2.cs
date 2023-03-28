@@ -50,7 +50,8 @@ namespace ProiectPawFormulare
             BinaryFormatter bf3 = new BinaryFormatter();
             FileStream fs3 = new FileStream("produse.dat", FileMode.Open, FileAccess.Read);
 
-         
+
+            listBoxProduse.Items.Clear();
             if (new FileInfo("produse.dat").Length != 0)
                    produse  = (List<Produs>)bf3.Deserialize(fs3);
                  fs3.Close();
