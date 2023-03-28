@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.salvareProduseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.citireProduseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salvareProduseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
             this.listBoxProduse = new System.Windows.Forms.ListBox();
             this.contextMenuStrip2.SuspendLayout();
@@ -45,12 +45,7 @@
             this.citireProduseToolStripMenuItem,
             this.salvareProduseToolStripMenuItem});
             this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(258, 101);
-            // 
-            // salvareProduseToolStripMenuItem
-            // 
-            this.salvareProduseToolStripMenuItem.Name = "salvareProduseToolStripMenuItem";
-            this.salvareProduseToolStripMenuItem.Size = new System.Drawing.Size(257, 32);
+            this.contextMenuStrip2.Size = new System.Drawing.Size(258, 68);
             // 
             // citireProduseToolStripMenuItem
             // 
@@ -59,6 +54,11 @@
             this.citireProduseToolStripMenuItem.Size = new System.Drawing.Size(257, 32);
             this.citireProduseToolStripMenuItem.Text = "Citire produse";
             this.citireProduseToolStripMenuItem.Click += new System.EventHandler(this.citireProduseToolStripMenuItem_Click);
+            // 
+            // salvareProduseToolStripMenuItem
+            // 
+            this.salvareProduseToolStripMenuItem.Name = "salvareProduseToolStripMenuItem";
+            this.salvareProduseToolStripMenuItem.Size = new System.Drawing.Size(257, 32);
             // 
             // button1
             // 
@@ -78,6 +78,7 @@
             this.listBoxProduse.ItemHeight = 20;
             this.listBoxProduse.Location = new System.Drawing.Point(12, 130);
             this.listBoxProduse.Name = "listBoxProduse";
+            this.listBoxProduse.ScrollAlwaysVisible = true;
             this.listBoxProduse.Size = new System.Drawing.Size(750, 304);
             this.listBoxProduse.TabIndex = 5;
             // 

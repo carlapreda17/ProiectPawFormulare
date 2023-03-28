@@ -32,8 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.salvareFisierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.citireFisierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salvareFisierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,6 +45,7 @@
             this.listBox1.ItemHeight = 20;
             this.listBox1.Location = new System.Drawing.Point(12, 12);
             this.listBox1.Name = "listBox1";
+            this.listBox1.ScrollAlwaysVisible = true;
             this.listBox1.Size = new System.Drawing.Size(750, 364);
             this.listBox1.TabIndex = 1;
             // 
@@ -55,20 +56,20 @@
             this.citireFisierToolStripMenuItem,
             this.salvareFisierToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(241, 101);
-            // 
-            // salvareFisierToolStripMenuItem
-            // 
-            this.salvareFisierToolStripMenuItem.Name = "salvareFisierToolStripMenuItem";
-            this.salvareFisierToolStripMenuItem.Size = new System.Drawing.Size(240, 32);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(229, 68);
             // 
             // citireFisierToolStripMenuItem
             // 
             this.citireFisierToolStripMenuItem.Name = "citireFisierToolStripMenuItem";
             this.citireFisierToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
-            this.citireFisierToolStripMenuItem.Size = new System.Drawing.Size(240, 32);
+            this.citireFisierToolStripMenuItem.Size = new System.Drawing.Size(228, 32);
             this.citireFisierToolStripMenuItem.Text = "Citire fisier";
             this.citireFisierToolStripMenuItem.Click += new System.EventHandler(this.citireFisierToolStripMenuItem_Click);
+            // 
+            // salvareFisierToolStripMenuItem
+            // 
+            this.salvareFisierToolStripMenuItem.Name = "salvareFisierToolStripMenuItem";
+            this.salvareFisierToolStripMenuItem.Size = new System.Drawing.Size(228, 32);
             // 
             // Form4
             // 
