@@ -29,7 +29,7 @@ namespace ProiectPawFormulare
                 produse = (List<Produs>)bf.Deserialize(fs);
             fs.Close();
 
-            FileStream fs1 = new FileStream("tranzactii.dat", FileMode.OpenOrCreate, FileAccess.Read);
+            FileStream fs1 = new FileStream("tranzactii.dat", FileMode.Open, FileAccess.Read);
             BinaryFormatter bf1 = new BinaryFormatter();
             if (new FileInfo("tranzactii.dat").Length != 0)
                tranzactii = (List<Tranzactii>)bf1.Deserialize(fs1);
@@ -61,6 +61,7 @@ namespace ProiectPawFormulare
 
             foreach (Tranzactii tranzactii in tranzactii)
             {
+
                 textBox1.Text += tranzactii.ToString() + Environment.NewLine;
             }
 

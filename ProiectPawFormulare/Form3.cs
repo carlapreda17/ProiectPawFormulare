@@ -49,10 +49,8 @@ namespace ProiectPawFormulare
                 DateTime data;
                 if (DateTime.TryParseExact(dataTb.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out data))
                 {
-                    Tranzactii t = new Tranzactii(dataTb.Text,Int32.Parse(codPTb.Text), Int32.Parse(cantTB.Text));
+                    Tranzactii t = new Tranzactii(dataTb.Text,Int32.Parse(cantTB.Text), Int32.Parse(codPTb.Text));
                     tranzactiiList.Add(t);
-
-
                     FileStream fs = new FileStream("tranzactii.dat", FileMode.Create, FileAccess.Write);
                     BinaryFormatter bf = new BinaryFormatter();
                     bf.Serialize(fs, tranzactiiList);
