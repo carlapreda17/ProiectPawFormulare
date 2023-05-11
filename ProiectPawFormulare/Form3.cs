@@ -23,6 +23,7 @@ namespace ProiectPawFormulare
         {
             InitializeComponent();
             m = magazin;
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -44,10 +45,24 @@ namespace ProiectPawFormulare
                 errorProvider1.SetError(cantTB, "Introduceti codul");
                 ok = 0;
             }
+            
             if (ok == 1)
             {
-                DateTime data;
-                if (DateTime.TryParseExact(dataTb.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out data))
+                var ok1 = 0;
+                foreach (Raion r in m.ListaRaioane)
+                {
+                    foreach (Tuple<Produs, int> p in r.ListaProduse)
+                    {
+                        if(p.Item1.CodProdus.ToString()==codPTb.Text)
+                        {
+                            ok1 = 1;
+                            break;
+                        }
+                    }
+                }
+
+                        DateTime data;
+                if (DateTime.TryParseExact(dataTb.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out data) && ok1==1)
                 {
                     Tranzactii t = new Tranzactii(dataTb.Text,Int32.Parse(cantTB.Text), Int32.Parse(codPTb.Text));
                     tranzactiiList.Add(t);
@@ -95,6 +110,12 @@ namespace ProiectPawFormulare
             Form4 form = new Form4(m);
             form.Show();
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form6 frm= new Form6();
+            frm.Show();
         }
     }
 }

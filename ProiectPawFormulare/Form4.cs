@@ -16,10 +16,11 @@ namespace ProiectPawFormulare
     {
         public Magazin m=new Magazin();
         List<Tranzactii> list=new List<Tranzactii>();
-        public Form4(Magazin m)
+        public Form4(Magazin magazin)
         {
             InitializeComponent();
-            foreach(Tranzactii t in m.ListaTranzactii)
+            magazin = m;
+            foreach(Tranzactii t in magazin.ListaTranzactii)
             {
                 
                 listBox1.Items.Add(t);

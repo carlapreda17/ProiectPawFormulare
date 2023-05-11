@@ -155,6 +155,20 @@ namespace ProiectPawFormulare
             from.Show();
         }
 
-       
+        private void vizulaizareProduseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 frm = new Form2(m);
+            //pt navigare intre ele ShowDialog - doar navigare pe cea deschisa
+            frm.ShowDialog();
+        }
+
+        private void vizualizareMagazinToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // MessageBox.Show(m.ToString());
+            Form5 from = new Form5(m);
+            from.Show();
+        }
+
+      
     }
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace ProiectPawFormulare
 {
     [Serializable]
-    public class Tranzactii
+    public class Tranzactii:ICloneable
     {
         private int cod;
         private int cantitate_produs;
@@ -58,6 +58,10 @@ namespace ProiectPawFormulare
             this.cost_final = pret_produs * cantitate_produs;
         }
 
-
+        public object Clone()
+        {
+           Tranzactii t=(Tranzactii)MemberwiseClone();
+            return t;
+        }
     }
 }
