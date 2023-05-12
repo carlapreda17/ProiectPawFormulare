@@ -23,7 +23,13 @@ namespace ProiectPawFormulare
         {
             InitializeComponent();
             m = magazin;
-           
+
+            FileStream fs1 = new FileStream("tranzactii.dat", FileMode.Open, FileAccess.Read);
+            BinaryFormatter bf1 = new BinaryFormatter();
+            if (new FileInfo("tranzactii.dat").Length != 0)
+                tranzactiiList = (List<Tranzactii>)bf1.Deserialize(fs1);
+            fs1.Close();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -48,7 +54,7 @@ namespace ProiectPawFormulare
             
             if (ok == 1)
             {
-                var ok1 = 0;
+               /* var ok1 = 0;
                 foreach (Raion r in m.ListaRaioane)
                 {
                     foreach (Tuple<Produs, int> p in r.ListaProduse)
@@ -59,10 +65,10 @@ namespace ProiectPawFormulare
                             break;
                         }
                     }
-                }
+                }*/
 
                         DateTime data;
-                if (DateTime.TryParseExact(dataTb.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out data) && ok1==1)
+                if (DateTime.TryParseExact(dataTb.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out data))
                 {
                     Tranzactii t = new Tranzactii(dataTb.Text,Int32.Parse(cantTB.Text), Int32.Parse(codPTb.Text));
                     tranzactiiList.Add(t);
