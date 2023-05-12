@@ -6,41 +6,28 @@ using System.Threading.Tasks;
 
 namespace ProiectPawFormulare
 {
+    [Serializable]
     public class Raion
     {
+        
         private string nume_raion;
-        private List<Tuple<Produs,int>> listaProduse; //adaugare produs+cantitate
+        private List<Produs> listaProduse; //adaugare produs+cantitate
 
 
         public string Nume_raion { get => nume_raion; set => nume_raion = value; }
-        
-
-        public List<Tuple<Produs, int>> ListaProduse
-        {
-            get { return listaProduse; }
-            set
-            {
-                if (value == null)
-                {
-                    throw new ArgumentNullException(nameof(value), "Lista de produse nu poate fi null.");
-                }
-
-                listaProduse = value;
-            }
-        }
-
+        public List<Produs> ListaProduse { get => listaProduse; set => listaProduse = value; }
 
         public Raion()
         {
             
             nume_raion = "";
-            listaProduse= new List<Tuple<Produs,int>>();
+           listaProduse = new List<Produs>();
         }
 
-        public Raion(string nume, List<Tuple<Produs, int>> lista)
+        public Raion(string nume, List<Produs> lista)
         {
             this.nume_raion = nume;
-            List<Tuple<Produs, int>> listaNoua = new List<Tuple<Produs, int>>();
+           List<Produs> listaNoua = new List<Produs>();
             foreach (var p in lista)
                     listaNoua.Add(p);
             listaProduse.AddRange(listaNoua);   //adauga elementele listei noi in listaProduse
@@ -58,18 +45,18 @@ namespace ProiectPawFormulare
             return rezultat;
         }
 
-        public static Raion operator +(Raion r, Tuple<Produs, int> pereche )
+        public static Raion operator +(Raion r, Produs p)
         {
 
-            r.listaProduse.Add(pereche);
+            r.listaProduse.Add(p);
             return r;
         }
 
-        public static Raion operator -(Raion r, Tuple<Produs, int> pereche)
+        public static Raion operator -(Raion r, Produs p)
         {
 
 
-            r.listaProduse.Remove(pereche);
+            r.listaProduse.Remove(p);
             return r;
         }
 

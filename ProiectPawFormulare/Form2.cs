@@ -20,14 +20,8 @@ namespace ProiectPawFormulare
         {
             InitializeComponent();
             m = magazin;
-            foreach (Raion r in m.ListaRaioane)
-            {
-                foreach (Tuple<Produs, int> p in r.ListaProduse)
-                {
-                   // textBox1.Text = p.Item1.ToString() + Environment.NewLine;
-                    listBoxProduse.Items.Add(p.Item1);
-                }
-            }
+           
+                
 
 
         }
@@ -48,17 +42,18 @@ namespace ProiectPawFormulare
         {
 
             BinaryFormatter bf3 = new BinaryFormatter();
-            FileStream fs3 = new FileStream("produse.dat", FileMode.Open, FileAccess.Read);
+            FileStream fs3 = new FileStream("magazin.dat", FileMode.Open, FileAccess.Read);
 
 
             listBoxProduse.Items.Clear();
-            if (new FileInfo("produse.dat").Length != 0)
-                   produse  = (List<Produs>)bf3.Deserialize(fs3);
+            if (new FileInfo("magazin.dat").Length != 0)
+                  m  = (Magazin)bf3.Deserialize(fs3);
                  fs3.Close();
-            foreach (Produs produs in produse)
-            {
 
-                listBoxProduse.Items.Add(produs);
+            foreach (Raion r in m.ListaRaioane)
+            {
+                foreach (Produs p in r.ListaProduse)
+                    listBoxProduse.Items.Add(p);
             }
         }
 

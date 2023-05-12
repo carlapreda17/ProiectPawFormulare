@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProiectPawFormulare
 {
+    [Serializable]
     public class Magazin
     {
         private string nume_magazin;
@@ -123,15 +124,16 @@ namespace ProiectPawFormulare
                 for (int i = 0; i < raion.ListaProduse.Count; i++)
                 {
                     var produs = raion.ListaProduse[i];
-                    if (tranzactie.Cod == produs.Item1.CodProdus)
+                    if (tranzactie.Cod == produs.CodProdus)
                     {
-                        tranzactie.CalculeazaCostFinal(produs.Item1.Pret);
-                        if (tranzactie.Cantitate_produs < produs.Item2)
+                        tranzactie.CalculeazaCostFinal(produs.Pret);
+                        if (tranzactie.Cantitate_produs <= produs.Cantitate)
                         {
-                            listaRaioane[j].ListaProduse[i] = new Tuple<Produs, int>(produs.Item1, produs.Item2 - tranzactie.Cantitate_produs);
+                          //  listaRaioane[j].ListaProduse[i] = new Produs(produs.CodProdus,produs. produs.Item2 - tranzactie.Cantitate_produs);
+                            produs.Cantitate = produs.Cantitate-tranzactie.Cantitate_produs;
 
                         }
-                        else if (tranzactie.Cantitate_produs == produs.Item2)
+                        else if (tranzactie.Cantitate_produs == produs.Cantitate)
                         {
                             //raion.ListaProduse.RemoveAt(i);
                             listaRaioane[j] -= produs;

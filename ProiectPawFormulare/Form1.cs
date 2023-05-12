@@ -17,16 +17,33 @@ namespace ProiectPawFormulare
 
         List<Raion> listaRaioane = new List<Raion>();
         List<Produs> listaProduse = new List<Produs>();
+        List<Tranzactii> listaTranzactii = new List<Tranzactii>();
+       
         public Magazin m = new Magazin();
 
         public Form1()
         {
             InitializeComponent();
-            FileStream fs = new FileStream("produse.dat", FileMode.Open, FileAccess.Read);
-            BinaryFormatter bf = new BinaryFormatter();
-            if (new FileInfo("produse.dat").Length != 0)
-                listaProduse = (List<Produs>)bf.Deserialize(fs);
-            fs.Close();
+            /* FileStream fs = new FileStream("produse.dat", FileMode.Open, FileAccess.Read);
+             BinaryFormatter bf = new BinaryFormatter();
+             if (new FileInfo("produse.dat").Length != 0)
+                 listaProduse = (List<Produs>)bf.Deserialize(fs);
+             fs.Close();
+
+             FileStream fs1 = new FileStream("tranzactii.dat", FileMode.Open, FileAccess.Read);
+             BinaryFormatter bf1 = new BinaryFormatter();
+             if (new FileInfo("tranzactii.dat").Length != 0)
+                 listaTranzactii = (List<Tranzactii>)bf1.Deserialize(fs1);
+             fs1.Close();*/
+
+            FileStream fs1 = new FileStream("magazin.dat", FileMode.Open, FileAccess.Read);
+            BinaryFormatter bf1 = new BinaryFormatter();
+            if (new FileInfo("magazin.dat").Length != 0)
+                m= (Magazin)bf1.Deserialize(fs1);
+            fs1.Close();
+
+           
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -82,17 +99,9 @@ namespace ProiectPawFormulare
 
                 if (ok == 1)
                 {
-                    Produs p=new Produs(Int32.Parse(codTb.Text),numeTb.Text,tipTb.Text,float.Parse(pretTb.Text));
                    
-                    
-                    listaProduse.Add(p);
-                    
 
-                    FileStream fs = new FileStream("produse.dat", FileMode.Create, FileAccess.Write);
-                    BinaryFormatter bf = new BinaryFormatter();
-                    bf.Serialize(fs, listaProduse);
-                    fs.Close();
-                    
+                  
                    
 
                     MessageBox.Show("Ai reusit sa adaugi produsul!");
@@ -110,17 +119,22 @@ namespace ProiectPawFormulare
                 int cantitate = Convert.ToInt32(cantitateTb.Text);
 
 
-                Produs p = new Produs(cod, nume, tip, pret);
-                Tuple<Produs, int> produsCantitate = new Tuple<Produs, int>(p, cantitate);
+                Produs p = new Produs(cod, nume, tip, pret,cantitate);
+               
                 listaProduse.Add(p);
 
                 for (int i = 0; i < m.ListaRaioane.Count; i++)
                 {
                     if (m.ListaRaioane[i].Nume_raion.ToLower() == tip.ToLower())
                     {
-                        m.ListaRaioane[i] = m.ListaRaioane[i] + produsCantitate;
+                        m.ListaRaioane[i] = m.ListaRaioane[i] + p;
                     }
                 }
+                FileStream fs = new FileStream("magazin.dat", FileMode.OpenOrCreate, FileAccess.Write);
+                BinaryFormatter bf = new BinaryFormatter();
+                bf.Serialize(fs, m);
+                fs.Close();
+
 
             }
             catch (Exception ex)

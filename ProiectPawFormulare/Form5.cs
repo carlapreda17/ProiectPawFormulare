@@ -22,25 +22,19 @@ namespace ProiectPawFormulare
         {
             InitializeComponent();
             m = magazin;
+            BinaryFormatter bf3 = new BinaryFormatter();
+            FileStream fs3 = new FileStream("magazin.dat", FileMode.Open, FileAccess.Read);
 
-            FileStream fs = new FileStream("produse.dat", FileMode.Open, FileAccess.Read);
-            BinaryFormatter bf = new BinaryFormatter();
-            if (new FileInfo("produse.dat").Length != 0)
-                produse = (List<Produs>)bf.Deserialize(fs);
-            fs.Close();
-
-            FileStream fs1 = new FileStream("tranzactii.dat", FileMode.Open, FileAccess.Read);
-            BinaryFormatter bf1 = new BinaryFormatter();
-            if (new FileInfo("tranzactii.dat").Length != 0)
-               tranzactii = (List<Tranzactii>)bf1.Deserialize(fs1);
-            fs1.Close();
+            if (new FileInfo("magazin.dat").Length != 0)
+                m = (Magazin)bf3.Deserialize(fs3);
+            fs3.Close();
 
 
             foreach (Raion r in m.ListaRaioane)
             {
                 int suma = 0;
                 string stringProduse = "";
-                foreach (Produs produs in produse)
+                foreach (Produs produs in r.ListaProduse)
                 {
                     if (produs.Tip.ToLower() == r.Nume_raion.ToLower())
                     {
@@ -59,7 +53,7 @@ namespace ProiectPawFormulare
                 }
             }
 
-            foreach (Tranzactii tranzactii in tranzactii)
+            foreach (Tranzactii tranzactii in m.ListaTranzactii)
             {
 
                 textBox1.Text += tranzactii.ToString() + Environment.NewLine;

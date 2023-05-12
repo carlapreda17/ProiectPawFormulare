@@ -24,11 +24,14 @@ namespace ProiectPawFormulare
             InitializeComponent();
             m = magazin;
 
-            FileStream fs1 = new FileStream("tranzactii.dat", FileMode.Open, FileAccess.Read);
-            BinaryFormatter bf1 = new BinaryFormatter();
-            if (new FileInfo("tranzactii.dat").Length != 0)
-                tranzactiiList = (List<Tranzactii>)bf1.Deserialize(fs1);
-            fs1.Close();
+            BinaryFormatter bf3 = new BinaryFormatter();
+            FileStream fs3 = new FileStream("magazin.dat", FileMode.Open, FileAccess.Read);
+
+            if (new FileInfo("magazin.dat").Length != 0)
+                m = (Magazin)bf3.Deserialize(fs3);
+            fs3.Close();
+
+           
 
         }
 
@@ -70,13 +73,7 @@ namespace ProiectPawFormulare
                         DateTime data;
                 if (DateTime.TryParseExact(dataTb.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out data))
                 {
-                    Tranzactii t = new Tranzactii(dataTb.Text,Int32.Parse(cantTB.Text), Int32.Parse(codPTb.Text));
-                    tranzactiiList.Add(t);
-                    FileStream fs = new FileStream("tranzactii.dat", FileMode.Create, FileAccess.Write);
-                    BinaryFormatter bf = new BinaryFormatter();
-                    bf.Serialize(fs, tranzactiiList);
-                    fs.Close();
-
+                   
 
                     MessageBox.Show("Ai reusit sa adaugi tranzactia!");
                 }
@@ -95,7 +92,13 @@ namespace ProiectPawFormulare
 
                 Tranzactii t = new Tranzactii(data, cantitate_produs, cod);
                 m.AdaugaTranzactie(t);
-                
+              
+                FileStream fs = new FileStream("magazin.dat", FileMode.Create, FileAccess.Write);
+                BinaryFormatter bf = new BinaryFormatter();
+                bf.Serialize(fs, m);
+                fs.Close();
+
+
             }
             catch (Exception ex)
             {
