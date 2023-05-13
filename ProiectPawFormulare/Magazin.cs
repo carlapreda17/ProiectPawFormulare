@@ -92,6 +92,7 @@ namespace ProiectPawFormulare
         public override string ToString()
         {
             string rezultat = "Magazinul de dulciuri " + nume_magazin + " de pe strada " + adresa + " are urmatoarele raioane: " + Environment.NewLine;
+           
 
             foreach (Raion r in listaRaioane)
             {

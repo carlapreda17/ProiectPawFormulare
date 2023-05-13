@@ -148,7 +148,8 @@ namespace ProiectPawFormulare
                     tipTb.Clear();
                     numeTb.Clear();
                     cantitateTb.Clear();
-                   
+                    int cod = new Random().Next(10000);
+                    codTb.Text = cod.ToString();
             }
 
         }

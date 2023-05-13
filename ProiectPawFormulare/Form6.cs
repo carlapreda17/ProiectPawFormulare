@@ -18,8 +18,9 @@ namespace ProiectPawFormulare
     public partial class Form6 : Form
     {
         //Chart chart = new Chart();
-        List<Tranzactii> tranzactii = new List<Tranzactii>();
-        
+
+        public Magazin m;
+
         Graphics gr;
         const int marg = 10;
         Bitmap bmp;
@@ -29,11 +30,12 @@ namespace ProiectPawFormulare
         {
             InitializeComponent();
 
-            FileStream fs1 = new FileStream("tranzactii.dat", FileMode.Open, FileAccess.Read);
-            BinaryFormatter bf1 = new BinaryFormatter();
-            if (new FileInfo("tranzactii.dat").Length != 0)
-                tranzactii = (List<Tranzactii>)bf1.Deserialize(fs1);
-            fs1.Close();
+            BinaryFormatter bf3 = new BinaryFormatter();
+            FileStream fs3 = new FileStream("magazin.dat", FileMode.Open, FileAccess.Read);
+
+            if (new FileInfo("magazin.dat").Length != 0)
+                m = (Magazin)bf3.Deserialize(fs3);
+            fs3.Close();
 
             gr = panel1.CreateGraphics();
 
@@ -49,27 +51,32 @@ namespace ProiectPawFormulare
            
 
 
-            double latime = rec.Width / tranzactii.Count / 2;
-            double distanta = (rec.Width - tranzactii.Count * latime) / (tranzactii.Count + 1);
+            double latime = rec.Width / m.ListaTranzactii.Count / 2;
+            double distanta = (rec.Width - m.ListaTranzactii.Count * latime) / (m.ListaTranzactii.Count + 1);
             double vMax = 0;
-            for (int i = 0; i < tranzactii.Count; i++)
+            int cantitate;
+            for (int i = 0; i < m.ListaTranzactii.Count; i++)
             {
-                if (tranzactii[i].Cantitate_produs > vMax)
-                    vMax = tranzactii[i].Cantitate_produs;
+                if (m.ListaTranzactii[i].Cantitate_produs > vMax)
+                    vMax = m.ListaTranzactii[i].Cantitate_produs;
             }
 
-            Brush b = new SolidBrush(Color.Yellow);
 
-            Rectangle[] recs = new Rectangle[tranzactii.Count];
-            for (int i = 0; i < tranzactii.Count; i++)
+                Brush b = new SolidBrush(Color.Yellow);
+
+            Rectangle[] recs = new Rectangle[m.ListaTranzactii.Count];
+            for (int i = 0; i < m.ListaTranzactii.Count; i++)
             {
-                recs[i] = new Rectangle((int)(rec.Location.X + (i + 1) * distanta + i * latime), (int)(rec.Location.Y + rec.Height - tranzactii[i].Cantitate_produs / vMax * rec.Height), (int)latime, (int)(tranzactii[i].Cantitate_produs / vMax * rec.Height));  //rectangle primeste doar valori int
-                                                                                                                                                                                                                                                                    // gr.FillRectangle(b, recs[i]);
-                gr.DrawString(tranzactii[i].Cantitate_produs.ToString(), this.Font, b, recs[i].Location.X, recs[i].Location.Y - this.Font.Height); //scadem inaltimea fontului
+                recs[i] = new Rectangle((int)(rec.Location.X + (i + 1) * distanta + i * latime), (int)(rec.Location.Y + rec.Height - m.ListaTranzactii[i].Cantitate_produs / vMax * rec.Height), (int)latime, (int)(m.ListaTranzactii[i].Cantitate_produs / vMax * rec.Height));  
+                                                                                                                                                                                                                                                                  
+                gr.DrawString(m.ListaTranzactii[i].Cantitate_produs.ToString(), this.Font, b, recs[i].Location.X, recs[i].Location.Y - this.Font.Height); //scadem inaltimea fontului
+                Font miniFont = new Font(this.Font.Name, (float)(this.Font.Size * 0.97));
+                gr.DrawString(m.ListaTranzactii[i].Data, this.Font,
+                       b, recs[i].Location.X - miniFont.Size, recs[i].Location.Y + recs[i].Height);
             }
             gr.FillRectangles(b, recs);
 
-            for (int i = 0; i < tranzactii.Count - 1; i++)
+            for (int i = 0; i < m.ListaTranzactii.Count - 1; i++)
 
                 gr.DrawLine(pen, new Point((int)(recs[i].Location.X + latime / 2), recs[i + 1].Location.Y), new Point((int)(recs[i].Location.X + latime / 2), recs[i + 1].Location.Y));
 

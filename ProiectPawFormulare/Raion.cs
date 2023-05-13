@@ -37,9 +37,22 @@ namespace ProiectPawFormulare
         public override string ToString()
         {
             string rezultat = "Raionul " + nume_raion + " are urmatoarele produse "+ Environment.NewLine;
-            foreach(var p in listaProduse)
+            int suma = 0;
+            foreach(Produs p in listaProduse)
             {
-                rezultat=rezultat+ p.ToString()+Environment.NewLine;
+               
+                suma++;
+            }
+            if(suma==0)
+            {
+                rezultat=rezultat + "Raionul " + nume_raion + " nu are produse!" + Environment.NewLine;
+            }
+            else
+            {
+                foreach (Produs p in listaProduse)
+                {
+                    rezultat=rezultat+ p.ToString()+Environment.NewLine;
+                }
             }
            
             return rezultat;

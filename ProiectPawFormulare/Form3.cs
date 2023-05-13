@@ -57,21 +57,21 @@ namespace ProiectPawFormulare
             
             if (ok == 1)
             {
-               /* var ok1 = 0;
+                var ok1 = 0;
                 foreach (Raion r in m.ListaRaioane)
                 {
-                    foreach (Tuple<Produs, int> p in r.ListaProduse)
+                    foreach (Produs p in r.ListaProduse)
                     {
-                        if(p.Item1.CodProdus.ToString()==codPTb.Text)
+                        if(p.CodProdus.ToString()==codPTb.Text)
                         {
                             ok1 = 1;
                             break;
                         }
                     }
-                }*/
+                }
 
                         DateTime data;
-                if (DateTime.TryParseExact(dataTb.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out data))
+                if (DateTime.TryParseExact(dataTb.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out data) && ok1==1)
                 {
                    
 
@@ -90,13 +90,34 @@ namespace ProiectPawFormulare
                 int cantitate_produs = Convert.ToInt32(cantTB.Text);
                 string data = dataTb.Text;
 
-                Tranzactii t = new Tranzactii(data, cantitate_produs, cod);
-                m.AdaugaTranzactie(t);
-              
-                FileStream fs = new FileStream("magazin.dat", FileMode.Create, FileAccess.Write);
-                BinaryFormatter bf = new BinaryFormatter();
-                bf.Serialize(fs, m);
-                fs.Close();
+                var ok2 = 0;
+                foreach (Raion r in m.ListaRaioane)
+                {
+                    foreach (Produs p in r.ListaProduse)
+                    {
+                        if (p.CodProdus.ToString() == codPTb.Text)
+                        {
+                            ok2 = 1;
+                            break;
+                        }
+                    }
+                }
+                if(ok2==1)
+                {
+                    Tranzactii t = new Tranzactii(data, cantitate_produs, cod);
+                    m.AdaugaTranzactie(t);
+
+                    FileStream fs = new FileStream("magazin.dat", FileMode.Create, FileAccess.Write);
+                    BinaryFormatter bf = new BinaryFormatter();
+                    bf.Serialize(fs, m);
+                    fs.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Nu exista produsul selectat");
+                }
+
+               
 
 
             }

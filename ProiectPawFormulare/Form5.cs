@@ -29,8 +29,9 @@ namespace ProiectPawFormulare
                 m = (Magazin)bf3.Deserialize(fs3);
             fs3.Close();
 
+            textBox1.Text=m.ToString();
 
-            foreach (Raion r in m.ListaRaioane)
+          /*  foreach (Raion r in m.ListaRaioane)
             {
                 int suma = 0;
                 string stringProduse = "";
@@ -57,7 +58,7 @@ namespace ProiectPawFormulare
             {
 
                 textBox1.Text += tranzactii.ToString() + Environment.NewLine;
-            }
+            }*/
 
 
 
