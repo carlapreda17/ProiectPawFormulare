@@ -31,35 +31,6 @@ namespace ProiectPawFormulare
 
             textBox1.Text=m.ToString();
 
-          /*  foreach (Raion r in m.ListaRaioane)
-            {
-                int suma = 0;
-                string stringProduse = "";
-                foreach (Produs produs in r.ListaProduse)
-                {
-                    if (produs.Tip.ToLower() == r.Nume_raion.ToLower())
-                    {
-                        suma++;
-                        stringProduse += produs.ToString() + Environment.NewLine;
-                    }
-                }
-                if (suma == 0)
-                {
-                    textBox1.Text += "Raionul " + r.Nume_raion + " nu are produse!" + Environment.NewLine;
-                }
-                else
-                {
-                    textBox1.Text += "Raionul " + r.Nume_raion + " are urmatoarele produse:" + Environment.NewLine;
-                    textBox1.Text += stringProduse;
-                }
-            }
-
-            foreach (Tranzactii tranzactii in m.ListaTranzactii)
-            {
-
-                textBox1.Text += tranzactii.ToString() + Environment.NewLine;
-            }*/
-
 
 
         }

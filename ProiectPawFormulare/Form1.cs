@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Data.OleDb;
 
 namespace ProiectPawFormulare
 {
@@ -18,43 +19,36 @@ namespace ProiectPawFormulare
         List<Raion> listaRaioane = new List<Raion>();
         List<Produs> listaProduse = new List<Produs>();
         List<Tranzactii> listaTranzactii = new List<Tranzactii>();
-       
+
+        string connString;
+      
         public Magazin m = new Magazin();
 
         public Form1()
         {
             InitializeComponent();
-            /* FileStream fs = new FileStream("produse.dat", FileMode.Open, FileAccess.Read);
-             BinaryFormatter bf = new BinaryFormatter();
-             if (new FileInfo("produse.dat").Length != 0)
-                 listaProduse = (List<Produs>)bf.Deserialize(fs);
-             fs.Close();
-
-             FileStream fs1 = new FileStream("tranzactii.dat", FileMode.Open, FileAccess.Read);
-             BinaryFormatter bf1 = new BinaryFormatter();
-             if (new FileInfo("tranzactii.dat").Length != 0)
-                 listaTranzactii = (List<Tranzactii>)bf1.Deserialize(fs1);
-             fs1.Close();*/
-
+           
             FileStream fs1 = new FileStream("magazin.dat", FileMode.Open, FileAccess.Read);
             BinaryFormatter bf1 = new BinaryFormatter();
             if (new FileInfo("magazin.dat").Length != 0)
                 m= (Magazin)bf1.Deserialize(fs1);
             fs1.Close();
+            connString = "Provider = Microsoft.ACE.OLEDB.12.0; Data Source = Produse.accdb";
 
-           
 
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             int cod = new Random().Next(10000);
-            codTb.Text = cod.ToString();    
+            codTb.Text = cod.ToString();
+            pictureBox1.Image = null;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            
+
             var ok = 1;
             if (codTb.Text == "")
             {
@@ -135,6 +129,25 @@ namespace ProiectPawFormulare
                 bf.Serialize(fs, m);
                 fs.Close();
 
+              /*  byte[] imageData;
+                using (MemoryStream ms = new MemoryStream())
+                {
+                    
+
+                    pictureBox1.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Png); 
+                    imageData = ms.ToArray(); 
+                }*/
+
+
+                OleDbConnection conexiune = new OleDbConnection(connString);
+                OleDbCommand comanda = new OleDbCommand("INSERT INTO Produse (ID,Poze) VALUES (@ID,@Imagine)", conexiune);
+
+                comanda.Parameters.AddWithValue("@ID", cod);
+                //comanda.Parameters.AddWithValue("@Imagine", imageData);
+
+                conexiune.Open();
+                comanda.ExecuteNonQuery();
+                conexiune.Close();
 
             }
             catch (Exception ex)
@@ -159,7 +172,7 @@ namespace ProiectPawFormulare
 
             Form2 frm = new Form2(m);
             //pt navigare intre ele ShowDialog - doar navigare pe cea deschisa
-            frm.ShowDialog();
+            frm.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -174,7 +187,7 @@ namespace ProiectPawFormulare
         {
             Form2 frm = new Form2(m);
             //pt navigare intre ele ShowDialog - doar navigare pe cea deschisa
-            frm.ShowDialog();
+            frm.Show();
         }
 
         private void vizualizareMagazinToolStripMenuItem_Click(object sender, EventArgs e)
@@ -184,6 +197,29 @@ namespace ProiectPawFormulare
             from.Show();
         }
 
-      
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Fișiere imagine (*.jpg, *.png, *.gif)|*.jpg;*.png;*.gif";
+
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string imagePath = openFileDialog.FileName;
+              
+                pictureBox1.Image = Image.FromFile(imagePath);
+               byte[] imageBytes = File.ReadAllBytes(imagePath);
+                OleDbConnection conexiune = new OleDbConnection(connString);
+                OleDbCommand comanda = new OleDbCommand("INSERT INTO Produse (Poze) VALUES (@Imagine)", conexiune);
+
+                
+                comanda.Parameters.AddWithValue("@Imagine", imageBytes);
+
+                conexiune.Open();
+                comanda.ExecuteNonQuery();
+                conexiune.Close();
+
+            }
+        }
     }
 }

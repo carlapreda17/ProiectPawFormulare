@@ -91,6 +91,7 @@ namespace ProiectPawFormulare
 
         public override string ToString()
         {
+            float cost_final = 0;
             string rezultat = "Magazinul de dulciuri " + nume_magazin + " de pe strada " + adresa + " are urmatoarele raioane: " + Environment.NewLine;
            
 
@@ -101,8 +102,10 @@ namespace ProiectPawFormulare
             foreach (Tranzactii t in listaTranzactii)
             {
                 rezultat += t.ToString() + Environment.NewLine;
+                cost_final = cost_final + t.Cost_final;
 
             }
+            rezultat=rezultat+"Total incasari: "+cost_final.ToString()+" ron";    
             return rezultat;
         }
 

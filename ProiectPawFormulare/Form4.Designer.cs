@@ -34,6 +34,8 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.citireFisierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stergereFisierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,11 +44,11 @@
             this.listBox1.ContextMenuStrip = this.contextMenuStrip1;
             this.listBox1.ForeColor = System.Drawing.Color.MediumSeaGreen;
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(8, 8);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.listBox1.ItemHeight = 20;
+            this.listBox1.Location = new System.Drawing.Point(12, 12);
             this.listBox1.Name = "listBox1";
             this.listBox1.ScrollAlwaysVisible = true;
-            this.listBox1.Size = new System.Drawing.Size(501, 238);
+            this.listBox1.Size = new System.Drawing.Size(750, 364);
             this.listBox1.TabIndex = 1;
             // 
             // contextMenuStrip1
@@ -56,7 +58,7 @@
             this.citireFisierToolStripMenuItem,
             this.stergereFisierToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(291, 101);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(291, 68);
             // 
             // citireFisierToolStripMenuItem
             // 
@@ -74,14 +76,34 @@
             this.stergereFisierToolStripMenuItem.Text = "Stergere tranzactie";
             this.stergereFisierToolStripMenuItem.Click += new System.EventHandler(this.salvareFisierToolStripMenuItem_Click);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(45, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(10, 10);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(744, 428);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(140, 34);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Vizualizare date";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form4
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(672, 384);
+            this.ClientSize = new System.Drawing.Size(1008, 555);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.listBox1);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form4";
             this.Text = "Form4";
             this.contextMenuStrip1.ResumeLayout(false);
@@ -94,5 +116,7 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem stergereFisierToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem citireFisierToolStripMenuItem;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }

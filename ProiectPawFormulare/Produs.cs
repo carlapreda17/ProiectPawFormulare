@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace ProiectPawFormulare
 {
     [Serializable]
-        public class Produs:IComparable
+        public class Produs:IComparable,ICloneable
         {
         private int codProdus;
         private float pret;
@@ -40,7 +40,7 @@ namespace ProiectPawFormulare
         }
         public override string ToString()
         {
-            return "Numele produsului este " + nume + ", de tip " + tip + ", cod: " + codProdus+", are pretul de "+pret+" lei"+" iar cantitatea este de "+cantitate;
+            return "Numele produsului este " + nume + ", de tip " + tip + ", cod: " + codProdus+", are pretul de "+pret+" ron"+" iar cantitatea este de "+cantitate;
         }
 
         public int CompareTo(object obj)
@@ -50,6 +50,12 @@ namespace ProiectPawFormulare
                 return -1;
             else
                 return string.Compare(tip, p.tip);
+        }
+
+        public object Clone()
+        {
+            Produs clona=(Produs)MemberwiseClone();
+            return clona;
         }
     }
 }

@@ -34,12 +34,12 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(34, 44);
+            this.textBox1.Location = new System.Drawing.Point(34, 34);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(906, 450);
+            this.textBox1.Size = new System.Drawing.Size(1003, 499);
             this.textBox1.TabIndex = 0;
             // 
             // Form5

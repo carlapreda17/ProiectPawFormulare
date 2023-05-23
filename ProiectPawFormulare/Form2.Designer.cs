@@ -72,22 +72,25 @@
             // 
             // listBoxProduse
             // 
+            this.listBoxProduse.AllowDrop = true;
             this.listBoxProduse.ContextMenuStrip = this.contextMenuStrip2;
             this.listBoxProduse.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.listBoxProduse.FormattingEnabled = true;
             this.listBoxProduse.ItemHeight = 20;
-            this.listBoxProduse.Location = new System.Drawing.Point(12, 130);
+            this.listBoxProduse.Location = new System.Drawing.Point(12, 134);
             this.listBoxProduse.Name = "listBoxProduse";
             this.listBoxProduse.ScrollAlwaysVisible = true;
-            this.listBoxProduse.Size = new System.Drawing.Size(750, 304);
+            this.listBoxProduse.Size = new System.Drawing.Size(813, 284);
             this.listBoxProduse.TabIndex = 5;
+            this.listBoxProduse.MouseDown += new System.Windows.Forms.MouseEventHandler(this.listBoxProduse_MouseDown);
+            this.listBoxProduse.MouseMove += new System.Windows.Forms.MouseEventHandler(this.listBoxProduse_MouseDown);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(800, 449);
+            this.ClientSize = new System.Drawing.Size(837, 449);
             this.Controls.Add(this.listBoxProduse);
             this.Controls.Add(this.button1);
             this.ForeColor = System.Drawing.Color.DeepPink;

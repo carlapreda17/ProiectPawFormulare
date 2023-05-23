@@ -34,9 +34,9 @@ namespace ProiectPawFormulare
 
         }
 
-      
 
-        
+
+
 
         private void citireProduseToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -47,17 +47,31 @@ namespace ProiectPawFormulare
 
             listBoxProduse.Items.Clear();
             if (new FileInfo("magazin.dat").Length != 0)
-                  m  = (Magazin)bf3.Deserialize(fs3);
-                 fs3.Close();
+                m = (Magazin)bf3.Deserialize(fs3);
+            fs3.Close();
 
             foreach (Raion r in m.ListaRaioane)
             {
                 foreach (Produs p in r.ListaProduse)
                     listBoxProduse.Items.Add(p);
             }
+           
         }
 
-        
+        private void listBoxProduse_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (listBoxProduse.SelectedItem != null)
+            {
+
+                Produs produsSelectat = (Produs)listBoxProduse.SelectedItem;
+
+                DragDropEffects efecteTragere = listBoxProduse.DoDragDrop(produsSelectat, DragDropEffects.Move);
+              /*  if (efecteTragere == DragDropEffects.Move)
+                {
+                    MessageBox.Show("Operatiunea de tragere s-a realizat cu succes!");
+                }*/
+            }
+        }
     }
 
 

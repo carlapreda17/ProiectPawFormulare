@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Drawing.Printing;
 
 namespace ProiectPawFormulare
 {
@@ -20,7 +21,9 @@ namespace ProiectPawFormulare
         {
             InitializeComponent();
             m= magazin;
-          
+
+           
+
         }
 
       
@@ -88,5 +91,14 @@ namespace ProiectPawFormulare
 
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+                Form6 frm = new Form6();
+                frm.Show();
+           
+        }
     }
+       
 }
