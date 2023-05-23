@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.codPTb = new System.Windows.Forms.TextBox();
             this.cantTB = new System.Windows.Forms.TextBox();
-            this.dataTb = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,6 +40,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,13 +57,6 @@
             this.cantTB.Name = "cantTB";
             this.cantTB.Size = new System.Drawing.Size(100, 26);
             this.cantTB.TabIndex = 1;
-            // 
-            // dataTb
-            // 
-            this.dataTb.Location = new System.Drawing.Point(198, 150);
-            this.dataTb.Name = "dataTb";
-            this.dataTb.Size = new System.Drawing.Size(100, 26);
-            this.dataTb.TabIndex = 2;
             // 
             // label1
             // 
@@ -126,6 +119,13 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(189, 150);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
+            this.dateTimePicker1.TabIndex = 11;
+            // 
             // Form3
             // 
             this.AllowDrop = true;
@@ -134,13 +134,13 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(927, 490);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataTb);
             this.Controls.Add(this.cantTB);
             this.Controls.Add(this.codPTb);
             this.ForeColor = System.Drawing.SystemColors.Highlight;
@@ -158,7 +158,6 @@
 
         private System.Windows.Forms.TextBox codPTb;
         private System.Windows.Forms.TextBox cantTB;
-        private System.Windows.Forms.TextBox dataTb;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -167,5 +166,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button4;
         private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

@@ -26,14 +26,15 @@ namespace ProiectPawFormulare
                     cantitate_produs = value;
             }
         }
-        public string Data { get => data; set => data = value; }
+       
         public int Cod { get => cod; set => cod = value; }
         public float Cost_final { get => cost_final; set => cost_final = value; }
+        public string Data { get => data; set => data = value; }
 
         public Tranzactii()
         {
 
-            data = "";
+            data = null;
             cantitate_produs = 0;
             cod = 0;
             cost_final = 0;

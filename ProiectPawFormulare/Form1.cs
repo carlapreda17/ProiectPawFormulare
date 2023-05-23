@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Data.OleDb;
+using System.Drawing.Imaging;
 
 namespace ProiectPawFormulare
 {
@@ -21,17 +22,17 @@ namespace ProiectPawFormulare
         List<Tranzactii> listaTranzactii = new List<Tranzactii>();
 
         string connString;
-      
+
         public Magazin m = new Magazin();
 
         public Form1()
         {
             InitializeComponent();
-           
+
             FileStream fs1 = new FileStream("magazin.dat", FileMode.Open, FileAccess.Read);
             BinaryFormatter bf1 = new BinaryFormatter();
             if (new FileInfo("magazin.dat").Length != 0)
-                m= (Magazin)bf1.Deserialize(fs1);
+                m = (Magazin)bf1.Deserialize(fs1);
             fs1.Close();
             connString = "Provider = Microsoft.ACE.OLEDB.12.0; Data Source = Produse.accdb";
 
@@ -47,7 +48,7 @@ namespace ProiectPawFormulare
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
 
             var ok = 1;
             if (codTb.Text == "")
@@ -65,13 +66,13 @@ namespace ProiectPawFormulare
                 errorProvider1.SetError(numeTb, "Introduceti numele");
                 ok = 0;
             }
-               
+
             if (tipTb.Text == "")
             {
                 errorProvider1.SetError(tipTb, "Introduceti tipul");
                 ok = 0;
             }
-           
+
             if (cantitateTb.Text == "")
             {
                 errorProvider1.SetError(cantitateTb, "Introduceti cantitatea");
@@ -87,16 +88,16 @@ namespace ProiectPawFormulare
                         MessageBox.Show("Tip Invalid!");
                         break;
                     }
-                    
-                   
+
+
                 }
 
                 if (ok == 1)
                 {
-                   
 
-                  
-                   
+
+
+
 
                     MessageBox.Show("Ai reusit sa adaugi produsul!");
                 }
@@ -113,8 +114,8 @@ namespace ProiectPawFormulare
                 int cantitate = Convert.ToInt32(cantitateTb.Text);
 
 
-                Produs p = new Produs(cod, nume, tip, pret,cantitate);
-               
+                Produs p = new Produs(cod, nume, tip, pret, cantitate);
+
                 listaProduse.Add(p);
 
                 for (int i = 0; i < m.ListaRaioane.Count; i++)
@@ -128,22 +129,22 @@ namespace ProiectPawFormulare
                 BinaryFormatter bf = new BinaryFormatter();
                 bf.Serialize(fs, m);
                 fs.Close();
-
-              /*  byte[] imageData;
+                byte[] imageData;
                 using (MemoryStream ms = new MemoryStream())
                 {
-                    
-
-                    pictureBox1.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Png); 
-                    imageData = ms.ToArray(); 
-                }*/
 
 
-                OleDbConnection conexiune = new OleDbConnection(connString);
+                    pictureBox1.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                    imageData = ms.ToArray();
+                }
+                
+
+
+                 OleDbConnection conexiune = new OleDbConnection(connString);
                 OleDbCommand comanda = new OleDbCommand("INSERT INTO Produse (ID,Poze) VALUES (@ID,@Imagine)", conexiune);
 
                 comanda.Parameters.AddWithValue("@ID", cod);
-                //comanda.Parameters.AddWithValue("@Imagine", imageData);
+                comanda.Parameters.AddWithValue("@Imagine", imageData);
 
                 conexiune.Open();
                 comanda.ExecuteNonQuery();
@@ -156,13 +157,13 @@ namespace ProiectPawFormulare
             }
             finally
             {
-                    codTb.Clear();
-                    pretTb.Clear(); 
-                    tipTb.Clear();
-                    numeTb.Clear();
-                    cantitateTb.Clear();
-                    int cod = new Random().Next(10000);
-                    codTb.Text = cod.ToString();
+                codTb.Clear();
+                pretTb.Clear();
+                tipTb.Clear();
+                numeTb.Clear();
+                cantitateTb.Clear();
+                int cod = new Random().Next(10000);
+                codTb.Text = cod.ToString();
             }
 
         }
@@ -177,8 +178,8 @@ namespace ProiectPawFormulare
 
         private void button3_Click(object sender, EventArgs e)
         {
-           
-           // MessageBox.Show(m.ToString());
+
+            // MessageBox.Show(m.ToString());
             Form5 from = new Form5(m);
             from.Show();
         }
@@ -196,30 +197,40 @@ namespace ProiectPawFormulare
             Form5 from = new Form5(m);
             from.Show();
         }
+        private bool isImageFile(string filePath)
+        {
+            string extension = System.IO.Path.GetExtension(filePath).ToLower();
+            return extension == ".jpg" || extension == ".jpeg" || extension == ".png" || extension == ".gif";
+        }
+
+
+
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            
+
+
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Fișiere imagine (*.jpg, *.png, *.gif)|*.jpg;*.png;*.gif";
-
+            //DialogResult rezultat = dialog.ShowDialog();
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string imagePath = openFileDialog.FileName;
-              
-                pictureBox1.Image = Image.FromFile(imagePath);
-               byte[] imageBytes = File.ReadAllBytes(imagePath);
-                OleDbConnection conexiune = new OleDbConnection(connString);
-                OleDbCommand comanda = new OleDbCommand("INSERT INTO Produse (Poze) VALUES (@Imagine)", conexiune);
+                if (isImageFile(imagePath))
+                {
+                    pictureBox1.Image = Image.FromFile(imagePath);
+                    byte[] imageBytes = File.ReadAllBytes(imagePath);
 
-                
-                comanda.Parameters.AddWithValue("@Imagine", imageBytes);
-
-                conexiune.Open();
-                comanda.ExecuteNonQuery();
-                conexiune.Close();
-
+                }
             }
+        }
+
+        private void galerieToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form7 from = new Form7(m);
+            from.Show();
         }
     }
 }

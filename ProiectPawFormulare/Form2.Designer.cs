@@ -90,7 +90,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(837, 449);
+            this.ClientSize = new System.Drawing.Size(1115, 475);
             this.Controls.Add(this.listBoxProduse);
             this.Controls.Add(this.button1);
             this.ForeColor = System.Drawing.Color.DeepPink;

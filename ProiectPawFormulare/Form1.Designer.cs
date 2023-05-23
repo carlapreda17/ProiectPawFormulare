@@ -49,6 +49,7 @@
             this.vizualizareMagazinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.galerieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -169,12 +170,13 @@
             // menuStrip1
             // 
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.meniuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(16, 9);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(106, 38);
+            this.menuStrip1.Size = new System.Drawing.Size(286, 38);
             this.menuStrip1.TabIndex = 14;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -182,7 +184,8 @@
             // 
             this.meniuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.vizulaizareProduseToolStripMenuItem,
-            this.vizualizareMagazinToolStripMenuItem});
+            this.vizualizareMagazinToolStripMenuItem,
+            this.galerieToolStripMenuItem});
             this.meniuToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Black", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.meniuToolStripMenuItem.Name = "meniuToolStripMenuItem";
             this.meniuToolStripMenuItem.Size = new System.Drawing.Size(98, 34);
@@ -216,6 +219,13 @@
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // galerieToolStripMenuItem
+            // 
+            this.galerieToolStripMenuItem.Name = "galerieToolStripMenuItem";
+            this.galerieToolStripMenuItem.Size = new System.Drawing.Size(332, 38);
+            this.galerieToolStripMenuItem.Text = "Galerie";
+            this.galerieToolStripMenuItem.Click += new System.EventHandler(this.galerieToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -275,6 +285,7 @@
         private System.Windows.Forms.ToolStripMenuItem vizualizareMagazinToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem galerieToolStripMenuItem;
     }
 }
 

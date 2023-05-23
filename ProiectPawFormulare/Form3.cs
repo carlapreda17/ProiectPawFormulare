@@ -46,11 +46,7 @@ namespace ProiectPawFormulare
                 errorProvider1.SetError(codPTb, "Introduceti codul");
                 ok = 0;
             }
-            if (dataTb.Text == "")
-            {
-                errorProvider1.SetError(dataTb, "Introduceti data");
-                ok = 0;
-            }
+          
                
             if (cantTB.Text == "")
             {
@@ -73,17 +69,8 @@ namespace ProiectPawFormulare
                     }
                 }
 
-                 DateTime data;
-                if (DateTime.TryParseExact(dataTb.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out data) && ok1==1)
-                {
-                   
-
-                    MessageBox.Show("Ai reusit sa adaugi tranzactia!");
-                }
-                else
-                {
-                    MessageBox.Show("Data invalida!");
-                }
+                 
+              
                    
 
             }
@@ -91,7 +78,12 @@ namespace ProiectPawFormulare
             {
                 int cod = Convert.ToInt32(codPTb.Text);
                 int cantitate_produs = Convert.ToInt32(cantTB.Text);
-                string data = dataTb.Text;
+                DateTime selectedDateTime = dateTimePicker1.Value;
+                string year=selectedDateTime.Year.ToString();
+                string month=selectedDateTime.Month.ToString();
+                string day=selectedDateTime.Day.ToString();
+                string data=selectedDateTime.ToString("dd/MM/yyyy");
+                
 
                 var ok2 = 0;
                 foreach (Raion r in m.ListaRaioane)
@@ -107,6 +99,7 @@ namespace ProiectPawFormulare
                 }
                 if(ok2==1)
                 {
+                    MessageBox.Show("Ai reusit sa adaugi tranzactia!");
                     Tranzactii t = new Tranzactii(data, cantitate_produs, cod);
                     m.AdaugaTranzactie(t);
 
@@ -132,7 +125,7 @@ namespace ProiectPawFormulare
             {
                 codPTb.Clear();
                 cantTB.Clear();
-                dataTb.Clear();
+               
             }
            
 
@@ -185,7 +178,7 @@ namespace ProiectPawFormulare
             e.Graphics.DrawString("VALOARE TRANZACȚIE: ", new Font("Arial", 16), Brushes.RoyalBlue, new Point(50, 170));
             e.Graphics.DrawString(m.ListaTranzactii[i].Cost_final.ToString()+" ron", new Font("Arial", 16), Brushes.RoyalBlue, new Point(300, 170));
             e.Graphics.DrawString("DATA TRANZACȚIE: ", new Font("Arial", 16), Brushes.RoyalBlue, new Point(50, 210));
-            e.Graphics.DrawString(m.ListaTranzactii[i].Data.ToString(), new Font("Arial", 16), Brushes.RoyalBlue, new Point(255, 210));
+            e.Graphics.DrawString(m.ListaTranzactii[i].Data, new Font("Arial", 16), Brushes.RoyalBlue, new Point(255, 210));
 
 
         }
