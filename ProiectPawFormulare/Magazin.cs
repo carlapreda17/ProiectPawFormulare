@@ -99,6 +99,7 @@ namespace ProiectPawFormulare
             {
                 rezultat += r.ToString() + Environment.NewLine;
             }
+            rezultat+="Tranzacțiile efectuate: "+ Environment.NewLine; 
             foreach (Tranzactii t in listaTranzactii)
             {
                 rezultat += t.ToString() + Environment.NewLine;
@@ -131,17 +132,16 @@ namespace ProiectPawFormulare
                     if (tranzactie.Cod == produs.CodProdus)
                     {
                         tranzactie.CalculeazaCostFinal(produs.Pret);
-                        if (tranzactie.Cantitate_produs <= produs.Cantitate)
+                        if (tranzactie.Cantitate_produs == produs.Cantitate)
                         {
-                          //  listaRaioane[j].ListaProduse[i] = new Produs(produs.CodProdus,produs. produs.Item2 - tranzactie.Cantitate_produs);
-                            produs.Cantitate = produs.Cantitate-tranzactie.Cantitate_produs;
-
-                        }
-                        else if (tranzactie.Cantitate_produs == produs.Cantitate)
-                        {
-                            //raion.ListaProduse.RemoveAt(i);
+                            //  listaRaioane[j].ListaProduse[i] = new Produs(produs.CodProdus,produs. produs.Item2 - tranzactie.Cantitate_produs);
                             listaRaioane[j] -= produs;
 
+                        }
+                        else if (tranzactie.Cantitate_produs <= produs.Cantitate)
+                        {
+                           
+                            produs.Cantitate = produs.Cantitate - tranzactie.Cantitate_produs;
                         }
                         else
                         {

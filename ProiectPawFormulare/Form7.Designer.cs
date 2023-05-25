@@ -63,9 +63,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(189, 94);
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox1.Location = new System.Drawing.Point(258, 118);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(462, 304);
+            this.pictureBox1.Size = new System.Drawing.Size(394, 287);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 

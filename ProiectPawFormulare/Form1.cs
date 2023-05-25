@@ -43,7 +43,7 @@ namespace ProiectPawFormulare
         {
             int cod = new Random().Next(10000);
             codTb.Text = cod.ToString();
-            pictureBox1.Image = null;
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -129,26 +129,30 @@ namespace ProiectPawFormulare
                 BinaryFormatter bf = new BinaryFormatter();
                 bf.Serialize(fs, m);
                 fs.Close();
-                byte[] imageData;
-                using (MemoryStream ms = new MemoryStream())
+                if(pictureBox1.Image != null && !IsEmptyImage(pictureBox1.Image))
                 {
+                    byte[] imageData;
+                    using (MemoryStream ms = new MemoryStream())
+                    {
 
 
-                    pictureBox1.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
-                    imageData = ms.ToArray();
+                        pictureBox1.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                        imageData = ms.ToArray();
+                    }
+
+
+
+                    OleDbConnection conexiune = new OleDbConnection(connString);
+                    OleDbCommand comanda = new OleDbCommand("INSERT INTO Produse (ID,Poze) VALUES (@ID,@Imagine)", conexiune);
+
+                    comanda.Parameters.AddWithValue("@ID", cod);
+                    comanda.Parameters.AddWithValue("@Imagine", imageData);
+
+                    conexiune.Open();
+                    comanda.ExecuteNonQuery();
+                    conexiune.Close();
                 }
-                
-
-
-                 OleDbConnection conexiune = new OleDbConnection(connString);
-                OleDbCommand comanda = new OleDbCommand("INSERT INTO Produse (ID,Poze) VALUES (@ID,@Imagine)", conexiune);
-
-                comanda.Parameters.AddWithValue("@ID", cod);
-                comanda.Parameters.AddWithValue("@Imagine", imageData);
-
-                conexiune.Open();
-                comanda.ExecuteNonQuery();
-                conexiune.Close();
+               
 
             }
             catch (Exception ex)
@@ -164,6 +168,12 @@ namespace ProiectPawFormulare
                 cantitateTb.Clear();
                 int cod = new Random().Next(10000);
                 codTb.Text = cod.ToString();
+                if (pictureBox1.Image != null)
+                {
+
+                    pictureBox1.Image.Dispose();
+                    pictureBox1.Image = null;
+                }
             }
 
         }
@@ -202,7 +212,23 @@ namespace ProiectPawFormulare
             string extension = System.IO.Path.GetExtension(filePath).ToLower();
             return extension == ".jpg" || extension == ".jpeg" || extension == ".png" || extension == ".gif";
         }
-
+        private bool IsEmptyImage(Image image)
+        {
+            using (var bitmap = new Bitmap(image))
+            {
+                for (int x = 0; x < bitmap.Width; x++)
+                {
+                    for (int y = 0; y < bitmap.Height; y++)
+                    {
+                        if (bitmap.GetPixel(x, y).A != 0)
+                        {
+                            return false;
+                        }
+                    }
+                }
+            }
+            return true;
+        }
 
 
 

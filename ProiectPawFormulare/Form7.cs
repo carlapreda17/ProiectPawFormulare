@@ -58,7 +58,7 @@ namespace ProiectPawFormulare
                     }
                     else
                     {
-                        // Nu există imagine înregistrată pentru ID-ul de produs
+                        MessageBox.Show("Produsul nu are poza");
                         pictureBox1.Image = null;
                     }
                 }

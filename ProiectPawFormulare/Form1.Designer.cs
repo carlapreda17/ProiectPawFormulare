@@ -47,9 +47,9 @@
             this.meniuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vizulaizareProduseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vizualizareMagazinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.galerieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.galerieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -88,9 +88,10 @@
             this.label1.AutoSize = true;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Location = new System.Drawing.Point(12, 88);
+            this.label1.Font = new System.Drawing.Font("Segoe UI Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(4, 82);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 22);
+            this.label1.Size = new System.Drawing.Size(122, 27);
             this.label1.TabIndex = 4;
             this.label1.Text = "Cod produs:";
             // 
@@ -98,9 +99,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Location = new System.Drawing.Point(12, 129);
+            this.label2.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(4, 125);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 22);
+            this.label2.Size = new System.Drawing.Size(109, 23);
             this.label2.TabIndex = 5;
             this.label2.Text = "Pret produs:";
             // 
@@ -108,9 +110,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label3.Location = new System.Drawing.Point(12, 168);
+            this.label3.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.Location = new System.Drawing.Point(3, 165);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 22);
+            this.label3.Size = new System.Drawing.Size(123, 23);
             this.label3.TabIndex = 6;
             this.label3.Text = "Nume produs:";
             // 
@@ -118,20 +121,26 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label4.Location = new System.Drawing.Point(12, 197);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 22);
+            this.label4.Size = new System.Drawing.Size(101, 23);
             this.label4.TabIndex = 7;
             this.label4.Text = "Tip produs:";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(38, 329);
+            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Segoe UI Black", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.button1.Location = new System.Drawing.Point(16, 302);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(154, 35);
+            this.button1.Size = new System.Drawing.Size(230, 43);
             this.button1.TabIndex = 8;
             this.button1.Text = "Creare produs";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // errorProvider1
@@ -149,16 +158,18 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label5.Location = new System.Drawing.Point(26, 240);
+            this.label5.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label5.Location = new System.Drawing.Point(16, 242);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 22);
+            this.label5.Size = new System.Drawing.Size(85, 23);
             this.label5.TabIndex = 10;
             this.label5.Text = "Cantitate";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.BackColor = System.Drawing.Color.LightCyan;
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label6.Font = new System.Drawing.Font("Segoe UI Black", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label6.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.label6.Location = new System.Drawing.Point(220, 9);
@@ -176,7 +187,7 @@
             this.meniuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(16, 9);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(286, 38);
+            this.menuStrip1.Size = new System.Drawing.Size(106, 38);
             this.menuStrip1.TabIndex = 14;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -193,17 +204,27 @@
             // 
             // vizulaizareProduseToolStripMenuItem
             // 
+            this.vizulaizareProduseToolStripMenuItem.ForeColor = System.Drawing.Color.HotPink;
             this.vizulaizareProduseToolStripMenuItem.Name = "vizulaizareProduseToolStripMenuItem";
-            this.vizulaizareProduseToolStripMenuItem.Size = new System.Drawing.Size(332, 38);
+            this.vizulaizareProduseToolStripMenuItem.Size = new System.Drawing.Size(331, 38);
             this.vizulaizareProduseToolStripMenuItem.Text = "Vizualizare produse";
             this.vizulaizareProduseToolStripMenuItem.Click += new System.EventHandler(this.vizulaizareProduseToolStripMenuItem_Click);
             // 
             // vizualizareMagazinToolStripMenuItem
             // 
+            this.vizualizareMagazinToolStripMenuItem.ForeColor = System.Drawing.Color.LightSkyBlue;
             this.vizualizareMagazinToolStripMenuItem.Name = "vizualizareMagazinToolStripMenuItem";
-            this.vizualizareMagazinToolStripMenuItem.Size = new System.Drawing.Size(332, 38);
-            this.vizualizareMagazinToolStripMenuItem.Text = "Vizualizare Magazin";
+            this.vizualizareMagazinToolStripMenuItem.Size = new System.Drawing.Size(331, 38);
+            this.vizualizareMagazinToolStripMenuItem.Text = "Vizualizare magazin";
             this.vizualizareMagazinToolStripMenuItem.Click += new System.EventHandler(this.vizualizareMagazinToolStripMenuItem_Click);
+            // 
+            // galerieToolStripMenuItem
+            // 
+            this.galerieToolStripMenuItem.ForeColor = System.Drawing.Color.MediumPurple;
+            this.galerieToolStripMenuItem.Name = "galerieToolStripMenuItem";
+            this.galerieToolStripMenuItem.Size = new System.Drawing.Size(331, 38);
+            this.galerieToolStripMenuItem.Text = "Galerie";
+            this.galerieToolStripMenuItem.Click += new System.EventHandler(this.galerieToolStripMenuItem_Click);
             // 
             // contextMenuStrip1
             // 
@@ -219,13 +240,6 @@
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // galerieToolStripMenuItem
-            // 
-            this.galerieToolStripMenuItem.Name = "galerieToolStripMenuItem";
-            this.galerieToolStripMenuItem.Size = new System.Drawing.Size(332, 38);
-            this.galerieToolStripMenuItem.Text = "Galerie";
-            this.galerieToolStripMenuItem.Click += new System.EventHandler(this.galerieToolStripMenuItem_Click);
             // 
             // Form1
             // 
