@@ -58,13 +58,14 @@ namespace ProiectPawFormulare
                     }
                     else
                     {
-                        MessageBox.Show("Produsul nu are poza");
+                       
                         pictureBox1.Image = null;
                     }
                 }
                 else
                 {
                     // ID-ul de produs nu a fost găsit în bază de date
+                    MessageBox.Show("Produsul nu are poza");
                     pictureBox1.Image = null;
                 }
 

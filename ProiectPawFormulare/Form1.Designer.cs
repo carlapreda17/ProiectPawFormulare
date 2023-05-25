@@ -193,6 +193,7 @@
             // 
             // meniuToolStripMenuItem
             // 
+            this.meniuToolStripMenuItem.BackColor = System.Drawing.SystemColors.Window;
             this.meniuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.vizulaizareProduseToolStripMenuItem,
             this.vizualizareMagazinToolStripMenuItem,
@@ -248,7 +249,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(957, 431);
+            this.ClientSize = new System.Drawing.Size(971, 441);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);

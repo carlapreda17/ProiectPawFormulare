@@ -62,25 +62,29 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(58, 78);
+            this.button1.BackColor = System.Drawing.Color.Lavender;
+            this.button1.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button1.ForeColor = System.Drawing.Color.DarkOrchid;
+            this.button1.Location = new System.Drawing.Point(39, 62);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(184, 29);
+            this.button1.Size = new System.Drawing.Size(338, 57);
             this.button1.TabIndex = 4;
             this.button1.Text = "Adauga Tranzactie";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // listBoxProduse
             // 
             this.listBoxProduse.AllowDrop = true;
             this.listBoxProduse.ContextMenuStrip = this.contextMenuStrip2;
-            this.listBoxProduse.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.listBoxProduse.Font = new System.Drawing.Font("Segoe UI Black", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.listBoxProduse.ForeColor = System.Drawing.Color.DarkMagenta;
             this.listBoxProduse.FormattingEnabled = true;
-            this.listBoxProduse.ItemHeight = 20;
-            this.listBoxProduse.Location = new System.Drawing.Point(12, 134);
+            this.listBoxProduse.ItemHeight = 21;
+            this.listBoxProduse.Location = new System.Drawing.Point(39, 149);
             this.listBoxProduse.Name = "listBoxProduse";
             this.listBoxProduse.ScrollAlwaysVisible = true;
-            this.listBoxProduse.Size = new System.Drawing.Size(813, 284);
+            this.listBoxProduse.Size = new System.Drawing.Size(976, 277);
             this.listBoxProduse.TabIndex = 5;
             this.listBoxProduse.MouseDown += new System.Windows.Forms.MouseEventHandler(this.listBoxProduse_MouseDown);
             this.listBoxProduse.MouseMove += new System.Windows.Forms.MouseEventHandler(this.listBoxProduse_MouseDown);

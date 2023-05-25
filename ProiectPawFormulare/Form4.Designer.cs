@@ -42,13 +42,14 @@
             // listBox1
             // 
             this.listBox1.ContextMenuStrip = this.contextMenuStrip1;
-            this.listBox1.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.listBox1.Font = new System.Drawing.Font("Segoe UI Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.listBox1.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
+            this.listBox1.ItemHeight = 25;
             this.listBox1.Location = new System.Drawing.Point(12, 12);
             this.listBox1.Name = "listBox1";
             this.listBox1.ScrollAlwaysVisible = true;
-            this.listBox1.Size = new System.Drawing.Size(750, 364);
+            this.listBox1.Size = new System.Drawing.Size(922, 354);
             this.listBox1.TabIndex = 1;
             // 
             // contextMenuStrip1
@@ -87,12 +88,15 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(744, 428);
+            this.button1.BackColor = System.Drawing.Color.LightCyan;
+            this.button1.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button1.ForeColor = System.Drawing.Color.DeepPink;
+            this.button1.Location = new System.Drawing.Point(744, 419);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 34);
+            this.button1.Size = new System.Drawing.Size(225, 43);
             this.button1.TabIndex = 4;
             this.button1.Text = "Vizualizare date";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form4

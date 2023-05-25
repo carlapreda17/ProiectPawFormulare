@@ -38,27 +38,33 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.Window;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Black", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.ForeColor = System.Drawing.Color.Fuchsia;
             this.label1.Location = new System.Drawing.Point(23, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(173, 20);
+            this.label1.Size = new System.Drawing.Size(268, 30);
             this.label1.TabIndex = 0;
             this.label1.Text = "Introducere ID produs: ";
             // 
             // tbCod
             // 
-            this.tbCod.Location = new System.Drawing.Point(237, 6);
+            this.tbCod.Location = new System.Drawing.Point(318, 11);
             this.tbCod.Name = "tbCod";
-            this.tbCod.Size = new System.Drawing.Size(100, 26);
+            this.tbCod.Size = new System.Drawing.Size(127, 26);
             this.tbCod.TabIndex = 1;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(422, 6);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.button1.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.button1.ForeColor = System.Drawing.Color.Fuchsia;
+            this.button1.Location = new System.Drawing.Point(488, 9);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(159, 37);
+            this.button1.Size = new System.Drawing.Size(164, 42);
             this.button1.TabIndex = 3;
             this.button1.Text = "Vizualizare";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
