@@ -42,7 +42,6 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.cantitateTb = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.meniuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vizulaizareProduseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,6 +49,7 @@
             this.galerieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.userControl11 = new ProiectPawFormulare.UserControl1();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -165,23 +165,9 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "Cantitate";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.LightCyan;
-            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Black", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label6.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label6.Location = new System.Drawing.Point(220, 9);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(489, 38);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Magazinul de dulciuri Candy Land";
-            // 
             // menuStrip1
             // 
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.meniuToolStripMenuItem});
@@ -242,6 +228,13 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // userControl11
+            // 
+            this.userControl11.Location = new System.Drawing.Point(243, 12);
+            this.userControl11.Name = "userControl11";
+            this.userControl11.Size = new System.Drawing.Size(489, 44);
+            this.userControl11.TabIndex = 16;
+            // 
             // Form1
             // 
             this.AccessibleDescription = "Magazin";
@@ -250,8 +243,8 @@
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(971, 441);
+            this.Controls.Add(this.userControl11);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cantitateTb);
             this.Controls.Add(this.button1);
@@ -293,7 +286,6 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.TextBox cantitateTb;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem meniuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vizulaizareProduseToolStripMenuItem;
@@ -301,6 +293,7 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ToolStripMenuItem galerieToolStripMenuItem;
+        private UserControl1 userControl11;
     }
 }
 

@@ -35,6 +35,7 @@
             this.salvareProduseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
             this.listBoxProduse = new System.Windows.Forms.ListBox();
+            this.userControl11 = new ProiectPawFormulare.UserControl1();
             this.contextMenuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,11 +66,11 @@
             this.button1.BackColor = System.Drawing.Color.Lavender;
             this.button1.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button1.ForeColor = System.Drawing.Color.DarkOrchid;
-            this.button1.Location = new System.Drawing.Point(39, 62);
+            this.button1.Location = new System.Drawing.Point(801, 412);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(338, 57);
+            this.button1.Size = new System.Drawing.Size(273, 51);
             this.button1.TabIndex = 4;
-            this.button1.Text = "Adauga Tranzactie";
+            this.button1.Text = "Adauga tranzactie";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
@@ -81,7 +82,7 @@
             this.listBoxProduse.ForeColor = System.Drawing.Color.DarkMagenta;
             this.listBoxProduse.FormattingEnabled = true;
             this.listBoxProduse.ItemHeight = 21;
-            this.listBoxProduse.Location = new System.Drawing.Point(39, 149);
+            this.listBoxProduse.Location = new System.Drawing.Point(42, 117);
             this.listBoxProduse.Name = "listBoxProduse";
             this.listBoxProduse.ScrollAlwaysVisible = true;
             this.listBoxProduse.Size = new System.Drawing.Size(976, 277);
@@ -89,12 +90,20 @@
             this.listBoxProduse.MouseDown += new System.Windows.Forms.MouseEventHandler(this.listBoxProduse_MouseDown);
             this.listBoxProduse.MouseMove += new System.Windows.Forms.MouseEventHandler(this.listBoxProduse_MouseDown);
             // 
+            // userControl11
+            // 
+            this.userControl11.Location = new System.Drawing.Point(298, 31);
+            this.userControl11.Name = "userControl11";
+            this.userControl11.Size = new System.Drawing.Size(489, 44);
+            this.userControl11.TabIndex = 6;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1115, 475);
+            this.Controls.Add(this.userControl11);
             this.Controls.Add(this.listBoxProduse);
             this.Controls.Add(this.button1);
             this.ForeColor = System.Drawing.Color.DeepPink;
@@ -111,5 +120,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
         private System.Windows.Forms.ToolStripMenuItem salvareProduseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem citireProduseToolStripMenuItem;
+        private UserControl1 userControl11;
     }
 }

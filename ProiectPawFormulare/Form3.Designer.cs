@@ -41,6 +41,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.userControl11 = new ProiectPawFormulare.UserControl1();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -146,6 +147,13 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
             this.dateTimePicker1.TabIndex = 11;
             // 
+            // userControl11
+            // 
+            this.userControl11.Location = new System.Drawing.Point(214, 12);
+            this.userControl11.Name = "userControl11";
+            this.userControl11.Size = new System.Drawing.Size(492, 42);
+            this.userControl11.TabIndex = 12;
+            // 
             // Form3
             // 
             this.AllowDrop = true;
@@ -154,6 +162,7 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(927, 490);
+            this.Controls.Add(this.userControl11);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
@@ -187,5 +196,6 @@
         private System.Windows.Forms.Button button4;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private UserControl1 userControl11;
     }
 }

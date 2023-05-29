@@ -36,6 +36,7 @@
             this.stergereFisierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.userControl11 = new ProiectPawFormulare.UserControl1();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,7 +47,7 @@
             this.listBox1.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 25;
-            this.listBox1.Location = new System.Drawing.Point(12, 12);
+            this.listBox1.Location = new System.Drawing.Point(28, 94);
             this.listBox1.Name = "listBox1";
             this.listBox1.ScrollAlwaysVisible = true;
             this.listBox1.Size = new System.Drawing.Size(922, 354);
@@ -91,7 +92,7 @@
             this.button1.BackColor = System.Drawing.Color.LightCyan;
             this.button1.Font = new System.Drawing.Font("Segoe UI Black", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.button1.ForeColor = System.Drawing.Color.DeepPink;
-            this.button1.Location = new System.Drawing.Point(744, 419);
+            this.button1.Location = new System.Drawing.Point(749, 469);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(225, 43);
             this.button1.TabIndex = 4;
@@ -99,12 +100,20 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // userControl11
+            // 
+            this.userControl11.Location = new System.Drawing.Point(215, 12);
+            this.userControl11.Name = "userControl11";
+            this.userControl11.Size = new System.Drawing.Size(493, 45);
+            this.userControl11.TabIndex = 5;
+            // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1008, 555);
+            this.Controls.Add(this.userControl11);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.listBox1);
@@ -122,5 +131,6 @@
         private System.Windows.Forms.ToolStripMenuItem citireFisierToolStripMenuItem;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private UserControl1 userControl11;
     }
 }

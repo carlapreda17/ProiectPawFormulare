@@ -32,12 +32,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.userControl11 = new ProiectPawFormulare.UserControl1();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Thistle;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(125, 95);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(908, 488);
@@ -55,12 +56,20 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
+            // userControl11
+            // 
+            this.userControl11.Location = new System.Drawing.Point(328, 26);
+            this.userControl11.Name = "userControl11";
+            this.userControl11.Size = new System.Drawing.Size(489, 44);
+            this.userControl11.TabIndex = 0;
+            // 
             // Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProiectPawFormulare.Properties.Resources._1d2aa75422857696943d3338f8ce1963;
             this.ClientSize = new System.Drawing.Size(1162, 597);
+            this.Controls.Add(this.userControl11);
             this.Controls.Add(this.panel1);
             this.Name = "Form6";
             this.Text = "Form6";
@@ -72,5 +81,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private UserControl1 userControl11;
     }
 }
